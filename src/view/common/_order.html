@@ -1,0 +1,61 @@
+
+<div class="m-order-demo" id="order" >
+  <div class="mask" @click="closeOrder"></div>
+  <div class="mo-content" >
+    <div class="container" style="position:relative; z-index:10">
+      <i class="iconfont icon-close" @click="closeOrder"></i>
+    </div>
+    <div class="container con-form" node-type="form"  style="position:relative; display:none" >
+      <h2>专业的数据顾问将与您取得联系</h2>
+      <h3>想要预约上门演示？接入试用？采购咨询？拨打 <b>4006-010-231</b> 或者留下您的联系方式，将有专业的数据顾问与您一对一解答</h3>
+      <div class="form " v-cloak>
+        <!-- <form> -->
+          <label :class="{suc: params.name}" node-type="name">
+            <input type="text"  placeholder="联系人" @blur="userInfoCheck('name')" v-model="params.name" :disabled="disabled.name">
+            <span>联系人</span>
+          </label>
+          <label :class="{suc: params.email}" node-type="email">
+            <input type="text" placeholder="邮箱" @blur="userInfoCheck('email')" v-model="params.email"
+            :disabled="disabled.email" >
+            <span>邮箱</span>
+          </label>
+          <label :class="{suc: params.phone}" node-type="phone">
+            <input type="text" placeholder="手机号" @blur="userInfoCheck('phone')" v-model="params.phone" :disabled="disabled.phone">
+            <span>手机号</span>
+          </label>
+          <label :class="{suc: params.entName}" node-type="entName">
+            <input type="text" placeholder="公司名称" @blur="userInfoCheck('entName')" v-model="params.entName" :disabled="disabled.entName">
+            <span>公司名称</span>
+          </label>
+          <label class="v-select-drop" node-type="companySize" :class="{suc: params.companySize}">
+            <p type="text"  v-html="params.companySize ? params.companySize : '公司规模' " :class="{'no-data': !params.companySize} " @click="showDropDown('companySize')"></p>
+            <span>公司规模</span>
+            <i class="iconfont icon-down" @click="showDropDown('companySize')" :class="{'up': show.companySize}"></i>
+            <div class="v-dropDown" v-cloak v-show="show.companySize">
+              <ul>
+                <li v-for="v in scaleList" @click="chooseItem(v, 'companySize')" v-html="v" :class="{active: v === params.companySize}"></li>
+              </ul>
+            </div>
+          </label>
+          <label class="v-select-drop" node-type="department" :class="{suc: params.department}">
+            <p type="text" v-html="params.department ? params.department : '所在部门' " :class="{'no-data': !params.department} " @click="showDropDown('department')"></p>
+            <span>所在部门</span>
+            <i class="iconfont icon-down" @click="showDropDown('department')"  :class="{'up': show.department}"></i>
+            <div class="v-dropDown" v-cloak v-show="show.department">
+              <ul>
+                <li v-for="v in departmentList" @click="chooseItem(v, 'department')" v-html="v" :class="{ active: v === params.department }"></li>
+              </ul>
+            </div>
+          </label>
+          <label class="remarks" node-type="remarks">
+            <p style="padding-left: 8px;">期待方舟为您解决什么问题？</p>
+            <textarea placeholder="告诉我们您的项目，处于的阶段，期望我们帮助的任何问题都可以" rows="10" v-model="params.remarks"  :disabled="disabled.remarks" @blur="userInfoCheck('remarks')" maxlength="200">
+            </textarea>
+            <b v-if="params.remarks.length > 0 && !disabled.remarks">还剩{{200-params.remarks.length}}个字可输入</b>
+          </label>
+          <div class="c-btn"><button class=" v-btn v-btn-primary" @click="submitOrder">提交</button></div>
+        <!-- </form> -->
+      </div>
+    </div>
+  </div>
+</div>

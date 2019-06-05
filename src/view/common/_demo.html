@@ -1,0 +1,35 @@
+<!-- <div class="demo-ft">
+  <div class="title">免费试用方舟，了解方舟如何帮你挖掘商机、增长业绩</div>
+  
+  <div class="text-button" id="inLoginedDemo">
+    <a href="#none" onclick="sdkDemo('${locals.login.paasServer}/dashboard?projectType=demo')">免费试用</a>
+    
+  </div>
+  <div class="text-button" id="notInLoginedDemo" style="display:none">
+    <a href="#none" onclick="sdkDemo('${locals.login.client}/view/sign/signup.html?projectType=demo')">免费试用</a>
+    
+  </div>
+</div> -->
+<div class="demo-footer">
+  <div class="df-cont">
+    <img src="${locals.baseUrl}/images/df/u2.png" alt="" class="lz">
+    <h1>获客、促活的秘密就在你的产品里</h1>
+    <p>你的产品很优秀，如果知道访客在你的网站或APP上都做了什么，就能发现获客、促活的秘密<br>通过转化漏斗分析、下钻用户行为，我们可以找到用户流失的原因，用数据驱动增长实验，实现精益成长<br>2019年第一季度，方舟帮用户实现了7倍的增长，在线体验demo，看看方舟有什么不可思议的力量</p>
+    <p class="lz-text">于揚 | 易观 创始人</p>
+    <div class="text-button" id="inLoginedDemo">
+      <a href="#none" onclick="sdkDemo('experience_demo','${locals.login.paasServer}/dashboard?projectType=demo','官网底部banner')">体验Demo</a>
+    </div>
+    <div class="text-button" id="notInLoginedDemo" style="display:none">
+      <a href="#none" onclick="sdkDemo('experience_demo','${locals.login.client}/view/sign/signup.html?projectType=demo','官网底部banner')">体验Demo</a>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+  var sdkDemo = function(key,url,text) {
+    AnalysysAgent.track(key, {
+      'referrer_demo': text
+    })
+    window.location.href = url
+  }
+  
+</script>

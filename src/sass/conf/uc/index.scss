@@ -1,0 +1,388 @@
+@import '../../common';
+.user-wrapper {
+  .about-banner {
+    margin-top: 80px;
+    background: #34b6f6;
+    background: linear-gradient(to right, #34b6f6 , #6f5af8);
+    background-image: linear-gradient(to right, #34b6f6, #6f5af8);
+    .banner-text {
+      padding: 60px 0 20px;
+      font-size: 36px;
+      color: #fff;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.16);
+      text-align: center;
+      line-height: 1.3;
+    }
+  }
+  .about-nav{
+    text-align: center;
+    li{
+      display:inline-block;
+      a{
+        position:relative;
+        display:block;
+        color: #fff;
+        font-size: 16px;
+        padding: 0 75px;
+        height:70px;
+        line-height:70px;
+        text-shadow: none;
+        opacity: 0.8;
+        &:hover{
+          opacity: 1;
+        }
+      }
+    }
+    .active {
+      a{
+        opacity: 1;
+        text-shadow: 1px 1px 3px rgba(0,0,0,0.16);
+        font-weight: bold;
+        &:after{
+          content:'';
+          position: absolute;
+          left: 50%;
+          bottom: -1px;
+          margin-left:-10px;
+          width:0;
+          height:0;
+          border-left: 10px solid transparent;
+          border-right: 10px solid transparent;
+          border-bottom: 10px solid #fff;
+        }
+      }
+    }
+  }
+  .logoInfo {
+    padding: 50px 0 24px;
+    .set {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      border: 2px solid #fff;
+      overflow: hidden;
+      margin: 0 auto;
+      position: relative;
+      cursor: pointer;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+      .hover-pop {
+        width: 100%;
+        height: 100%;
+        line-height: 18px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: rgba(0, 0, 0, .48);
+        padding-top: 30px;
+        text-align: center;
+        font-size: 14px;
+        color: #fff;
+        cursor: pointer;
+        display: none;
+        .iconfont {
+          font-size: 20px;
+        }
+      }
+      &:hover {
+        .hover-pop {
+          display: block;
+        }
+      }
+    }
+    .uname {
+      font-size: 18px;
+      color: #fff;
+      margin-top: 18px;
+      text-align: center;
+      min-height: 27px;
+    }
+  }
+
+  /* userInfo */
+  .info-bd {
+    background: #fff;
+    min-height: 519px;
+    .info-content {
+      width: 960px;
+      margin: 0 auto;
+      padding-top: 30px;
+      .info-cube {
+        padding: 50px 0;
+        position: relative;
+        .info-tit {
+          position: absolute;
+          top: 50px;
+          left: 0;
+          font-size: 14px;
+          color: #666;
+        }
+        .info-ul {
+          padding-left: 105px;
+          .info-li {
+            font-size: 14px;
+            margin-bottom: 20px;
+            &:last-child {
+              margin-bottom: 0;
+            }
+            .li-key {
+              text-align: right;
+              padding-right: 35px;
+              display: inline-block;
+              width: 110px;
+              color: #999;
+            }
+            .li-val {
+              color: #666;
+            }
+            .edit {
+              color: #0098e1;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* license */
+  .lis-bd {
+    background: #fff;
+    min-height: 400px;
+    .provision {
+      width: 1100px;
+      margin: 0 auto;
+      padding: 70px 0;
+      .main-text {
+        margin-bottom: 20px;
+      }
+      .bot-opera, .bottom-fixed {
+        text-align: right;
+        .checkbox-label {
+          font-weight: normal;
+          color: #0098e1;
+        }
+        .getLis {
+          display: inline-block;
+          width: 114px;
+          height: 32px;
+          line-height: 32px;
+          background-image: linear-gradient(90deg, #36b3f6 0%, #6d5df8 100%), linear-gradient(#f4a164, #f4a164);
+          border-radius: 16px;
+          text-align: center;
+          margin-left: 20px;
+          font-size: 14px;
+          color: #fff;
+          &.disabled {
+            background: #ccc;
+            cursor: not-allowed;
+          }
+        }
+      }
+      .bottom-fixed {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        background: #fff;
+        width: 100%;
+        height: 64px;
+        line-height: 64px;
+        border-top: 1px solid #efefef;
+        z-index: 99;
+        .fwd {
+          width: 1100px;
+          margin: 0 auto;
+        }
+      }
+    }
+    .lis-normal {
+      width: 1088px;
+      margin: 0 auto;
+      padding: 75px 0 125px;
+      .lis-tit {
+        font-size: 18px;
+        color: #666;
+        margin-bottom: 25px;
+      }
+      .lis-item {
+        height: 148px;
+        background-color: #fff;
+        border-radius: 2px;
+        border: solid 1px #f0f0f0;
+        margin-bottom: 15px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+        .lis-item-inner {
+          padding-top: 38px;
+          &.minScreen {
+            display: none;
+          }
+          &::after {
+            content: '';
+            display: block;
+            clear: both;
+          }
+          .inner-flex {
+            float: left;
+          }
+          .tit {
+            width: 22%;
+            text-align: center;
+            border-right: solid 1px #f0f0f0;
+            img {
+              vertical-align: middle;
+              margin-right: 13px;
+            }
+            span {
+              font-size: 18px;
+              color: #333;
+            }
+          }
+          .ul {
+            width: 78%;
+            div {
+              padding: 16px 0 0 40px;
+              .key {
+                font-size: 12px;
+                color: #999;
+                margin-bottom: 4px;
+              }
+              .val {
+                font-size: 14px;
+                color: #333;
+                a {
+                  color: #0098e1;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .no-power {
+      padding: 53px 0 102px;
+      text-align: center;
+      p {
+        font-size: 16px;
+        color: #666;
+        margin: 30px 0 25px;
+      }
+      .phone {
+        span {
+          font-size: 30px;
+          color: #666;
+          &.p-icon {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            line-height: 36px;
+            border: solid 1px #bbb;
+            border-radius: 50%;
+            margin-right: 13px;
+            .iconfont {
+              color: #999;
+              font-size: 22px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .user-wrapper {
+    .about-banner {
+      margin-top: 56px;
+    }
+    .about-nav {
+      li a {
+        padding: 0 32px;
+      }
+    }
+    .info-bd {
+      .info-content {
+        width: 100%;
+        padding-top: 0;
+        .info-cube {
+          padding: 25px 0;
+          .info-tit {
+            position: static;
+            display: block;
+            padding-left: 20px;
+            margin-bottom: 15px;
+            font-size: 16px;
+          }
+          .info-ul {
+            padding-left: 20px;
+          }
+        }
+      }
+    }
+    .lis-bd {
+      .provision {
+        width: 100%;
+        padding: 40px 10px;
+        .bottom-fixed {
+          .fwd {
+            width: 100%;
+            padding-right: 10px;
+          }
+        }
+      }
+      .lis-normal {
+        width: 340px;
+        padding: 35px 0 85px;
+        .lis-tit {
+          font-size: 20px;
+          padding-bottom: 20px;
+          border-bottom: 1px solid #e6e6e6;
+          margin-bottom: 15px;
+        }
+        .lis-item {
+          border: none;
+          border-bottom: 1px solid #e6e6e6;
+          height: auto;
+          .lis-item-inner {
+            display: none;
+            &.minScreen {
+              display: block;
+              padding-top: 0;
+              .tit {
+                width: 100%;
+                text-align: left;
+                margin-bottom: 10px;
+                border-right: none;
+                img {
+                  width: 48px;
+                  height: 48px;
+                }
+                span {
+                  font-size: 18px;
+                }
+              }
+              ul {
+                li {
+                  margin-bottom: 15px;
+                  font-size: 15px;
+                  .key {
+                    color: #999;
+                  }
+                  .val {
+                    float: right;
+                    color: #333;
+                    a {
+                      color: #0098e1;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

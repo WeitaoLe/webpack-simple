@@ -1,0 +1,16 @@
+@import '../../common';
+@import './source/github-extract.css';
+@import './source/mermaid.css';
+@import './source/markdown.css';
+@import './source/pretty.css';
+
+body {
+	overflow-x: hidden;
+}
+
+.p-docs {
+  .markdown-body { max-width: 800px; font-size: 13px; }
+  .ui-affix-toc { top: 80px; }
+  .toc-menu { display: none; }
+  .container { margin-top: 80px; }
+}

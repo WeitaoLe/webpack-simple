@@ -1,0 +1,163 @@
+body, button, input, select, textarea {
+  font: 12px/1.5 "PingFangSC-Regular", "Helvetica Neue", Helvetica, "Microsoft Yahei", Arial , "Hiragino Sans GB", tahoma, SimSun, sans-serif;
+}
+body, html{
+  min-height: 100%;
+}
+body {
+  -webkit-font-smoothing: antialiased;
+  -webkit-overflow-scrolling: touch;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-text-size-adjust: none;
+  -webkit-touch-callout: none;
+}
+blockquote,body,button,dd,dl,dt,fieldset,form,h1,h2,h3,h4,h5,h6,hr,input,legend,li,ol,p,pre,td,textarea,th,ul {
+  margin: 0;
+  padding: 0;
+}
+
+body,a {
+  color: #333;
+}
+ol,ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+
+img {
+  border:0;
+}
+a,input {
+  outline: 0;
+}
+
+*, :after, :before { box-sizing: border-box; }
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+.overflow-y-hidden {
+  overflow-y: hidden;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*浏览器滚动条样式*/
+.scrollbar {
+  overflow-y: auto;
+}
+.scrollbar::-webkit-scrollbar {
+    width:6px;
+    height:6px;
+}
+.scrollbar::-webkit-scrollbar-track-piece {
+    background: #fff;
+    border-radius: 5px;
+}
+.scrollbar::-webkit-scrollbar-thumb{
+    background: #0098e1;
+    border-radius: 5px;
+}
+
+// clearfix, `outer` deprecated, use clearfix instead.
+.outer, .clearfix {
+  zoom: 1;
+  &:after {
+    clear: both;
+    content: ' ';
+    display: block;
+    width: 0;
+    height: 0;
+    visibility: hidden;
+  }
+}
+
+[v-cloak] {
+  display: none;
+}
+
+// 列表为空时提示
+.empty-ts {
+  width:300px;
+  margin: 0 auto;
+  padding-top:100px;
+  text-align: center;
+  .ts-text {
+    font-size:14px;
+    color:#666;
+    line-height:55px;
+  }
+  .button {
+    display:inline-block;
+    padding:0 24px;
+    background-color: #f4a164;
+    color: #fff;
+    line-height:32px;
+    border: 1px solid #f4a164;
+    border-radius: 15px;
+
+    cursor: pointer;
+    outline: none;
+
+    &:hover {
+      background-color: #ff9f22;
+      border: 1px solid #ff9f22;
+    }
+    &:active{
+      background-color: #ff9f22;
+      border: 1px solid #ff9f22;
+    }
+
+  }
+}
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.gotop, .gotop-seach {
+      position: fixed;
+      display: none;
+      width: 60px;
+      height: 60px;
+      background: #f3f3f3;
+      bottom: 330px;
+      color: #ddd;
+      text-align: center;
+      line-height: 60px;
+      cursor: pointer;
+      z-index: 1;
+      right: 50%;
+      margin-right: -655px;
+      .iconfont {
+        font-size: 40px;
+      }
+      &:hover {
+        background: #79cef7;
+        color: #fff;
+        height: 80px;
+        padding-top: 20px;
+        &:after {
+          content: '回到顶部';
+          position: absolute;
+          top: -14px;
+          left: 6px;
+          font-size: 10px;
+        }
+      }
+    }

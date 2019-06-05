@@ -1,0 +1,271 @@
+@import '../../common';
+
+body {
+  background: #fff;
+}
+
+.about-banner {
+  margin-top: 80px;
+  height: 240px;
+  background: #34b6f6;
+  background: linear-gradient(to right, #34b6f6 , #6f5af8);
+  background-image: linear-gradient(to right, #34b6f6, #6f5af8);
+  .banner-text {
+    padding-top:70px;
+    height: 170px;
+    line-height: 48px;
+    font-size: 36px;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.16);
+    text-align: center;
+  }
+}
+
+@media (max-width: 992px) {
+  .about-banner .banner-text {
+    font-size: 26px;
+  }
+  .about-nav{
+    display : flex;
+    li{
+      flex:1 ;
+      a{
+        padding: 0;
+        font-size : 14px;
+      }
+    }
+  }
+}
+@media (min-width: 992px) {
+  .about-nav{
+    li{
+      a{
+        padding: 0;
+        font-size : 16px;
+        padding: 0 32px;
+
+      }
+    }
+  }
+}
+.about-nav{
+  text-align: center;
+  li{
+    display:inline-block;
+    a{
+      position:relative;
+      display:block;
+      color: #fff;
+      white-space: nowrap;
+      height:70px;
+      line-height:70px;
+      text-shadow:none;
+      opacity:0.8;
+      &:hover{
+        opacity: 1;
+      }
+    }
+  }
+  .active {
+    a{
+      opacity: 1;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.16);
+      font-weight: bold;
+      &:after{
+        content:'';
+        position: absolute;
+        left: 50%;
+        bottom: -1px;
+        margin-left:-10px;
+        width:0;
+        height:0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 10px solid #fff;
+      }
+    }
+
+  }
+
+}
+
+.document-div {
+  margin: 0 auto;
+  clear: both;
+  @media (max-width: 992px) {
+    margin: 30px 0;
+  }
+  @media (min-width: 992px) {
+    margin: 30px 30px 0;
+  }
+  @media (min-width: 1190px) {
+    margin:  30px auto;
+  }
+
+  @media (min-width: 992px) {
+    .document-l {
+      float: left;
+    }
+    .document-r {
+      float: right;
+      position: relative;
+      padding: 150px 20px;
+      .logo-h5 {
+        display: none;
+      }
+      img{
+        position: absolute;
+        right: 0;
+      }
+    }
+  }
+  @media (max-width: 992px) {
+
+    .document-r {
+      text-align: center;
+      .logo-h5 {
+        display: inline-block;
+      }
+      .logo-pc {
+        display: none;
+      }
+    }
+  }
+
+
+  .document-l {
+  }
+  .document-r {
+  }
+
+  h3 {
+    font-size: 24px;
+    color: #333;
+    font-weight: normal;
+  }
+  h4 {
+    line-height: 40px;
+    font-size: 20px;
+    color: #333;
+    font-weight: normal;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  p {
+    padding: 6px 0;
+    font-size: 14px;
+    line-height: 22px;
+    color: #444;
+  }
+  a {
+    color: #444;
+  }
+  .italicfont {
+    font-weight: bold;
+    font-style: italic;
+  }
+  .margin-t {
+    margin-top: 20px;
+  }
+
+  .margin-b {
+    margin-bottom: 20px;
+  }
+  .margin-b2 {
+    margin-bottom: 60px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .pictures-div{
+    .logo-list {
+      li{
+        width: 20%;
+      }
+    }
+  }
+}
+@media  (min-width: 1000px) and (max-width: 1200px) {
+  .pictures-div{
+    width: 100%;
+    .logo-list {
+      li{
+        width: 25%;
+      }
+    }
+  }
+}
+
+@media  (min-width: 768px) and (max-width: 1000px) {
+  .pictures-div{
+    width: 100%;
+    .logo-list {
+      li{
+        width: 33.33%;
+      }
+    }
+  }
+}
+
+@media  (max-width: 768px) {
+  .pictures-div{
+    width: 100%;
+    .logo-list {
+      li{
+        width: 50%;
+      }
+    }
+  }
+}
+
+.pictures-div {
+  margin: 40px auto 60px;
+  .logo-list {
+    li {
+      float: left;
+      height: 140px;
+      box-sizing: border-box;
+      border: 1px solid #edf4f7;
+      line-height: 140px;
+      text-align: center;
+      cursor: pointer;
+      img {
+        vertical-align:middle;
+      }
+      &:hover {
+        background: #f9f9f9;
+      }
+    }
+  }
+}
+
+.p-company {
+  .document-div h3 {
+    line-height: 66px;
+  }
+}
+.p-privacy, .p-opt {
+  h3 {
+    line-height: 36px;
+  }
+  .txt-notice {
+    margin-top:30px;
+    color: #ffa341;
+    line-height: 24px;
+  }
+}
+.p-opt {
+  .v-input-id {
+    width: 100%;
+    margin-left:-15px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .about-banner{
+    margin-top: 56px;
+  }
+}
+
+
+

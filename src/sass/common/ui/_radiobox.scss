@@ -1,0 +1,25 @@
+.v-radio{
+	display: inline-block;
+	position: relative;
+	width: 14px; 
+	height: 14px;
+	border: 1px solid #0098e1;
+	border-radius: 8px;
+	font-size: 14px;
+	top: 50%;
+	margin-top: -8px;
+	i{
+		position: absolute;
+		width: 8px;
+		height: 8px;
+		border-radius: 4px;
+		top: 50%;
+		margin-top: -4px;
+		left: 50%;
+		margin-left: -4px;
+		&.v-checked{
+			background-color: #0098e1;
+			animation: bounceIn .8s 0s ease both;
+		}
+	}
+}

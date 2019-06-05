@@ -1,0 +1,128 @@
+@import '../../common';
+
+.industry-demo {
+  margin: 0;
+  width: 100%;
+  .bg {
+    height: 240px;
+    margin-top: 80px;
+    text-align:center;
+    background-image: linear-gradient(90deg, #34b6f6 0%, #6f5af8 100%);
+    .title {
+      font-size: 36px;
+      padding-top: 60px;
+      color: #fff;
+    }
+
+    .sub-title {
+      font-size: 16px;
+      padding: 10px 20px 0;
+      color: rgba(255, 255, 255, 0.6);
+      text-align: center;
+    }
+  }
+
+  .demo-content {
+     width: 100%;
+     @media (min-width: 992px) {
+       .box{
+         min-height:420px;
+         &:nth-of-type(2), &:nth-of-type(3),&:nth-of-type(6){
+          background-color:#fafbff;
+        }
+       }
+      }
+      @media (max-width: 992px) {
+        .box{
+          &:nth-of-type(2), &:nth-of-type(4),&:nth-of-type(6) {
+            background-color:#fafbff;
+          }
+        }
+       }
+    @media (min-width: 1190px) {
+      .box{
+        min-height:420px;
+        .inner-row{
+          width:595px;
+          float:right;
+        }
+        &:nth-of-type(2), &:nth-of-type(3),&:nth-of-type(6){
+          background-color:#fafbff;
+        }
+        &:nth-of-type(2), &:nth-of-type(4),&:nth-of-type(6) {
+          .inner-row{
+            float:left;
+          }
+        }
+      }
+    }
+
+     .box {
+       .demo-icon {
+        padding-top: 60px;
+        text-align: center;
+        img {
+          display: inline-blok;
+          min-width: 59px;
+          max-width: 100%;
+        }
+      }
+      .detail {
+        padding: 60px 40px 0 0;
+        font-size: 14px;
+        color: #666;
+        .title {
+          font-size: 24px;
+          color: #333;
+        }
+
+        .sub-title{
+          margin: 20px 0;
+          line-height: 24px;
+          text-align: justify;
+          text-justify: inter-word;
+        }
+
+        .list {
+          line-height: 24px;
+          margin-top: 20px;
+          margin-bottom: 32px;
+          li {
+            &:before {
+              content: '• ';
+              display: inline-block;
+              margin-right: 5px;
+            }
+          }
+        }
+
+        .try-demo {
+          font-size: 14px;
+          display:inline-block;
+          height: 40px;
+          padding: 10px 24px;
+          border-radius: 88px;
+          color: #fff;
+          background-image: linear-gradient(90deg, #feb167, #ff8f5f);
+          margin-bottom: 20px;
+          &:hover {
+            opacity: 0.8;
+          }
+        }
+      }
+     }
+  }
+  .clear {
+    &:after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .industry-demo .bg {
+    margin-top: 56px;
+  }
+}

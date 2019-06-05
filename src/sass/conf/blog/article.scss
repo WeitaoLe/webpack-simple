@@ -1,0 +1,163 @@
+@import '../../common';
+
+.p-article {
+  .article-main {
+    width: 1190px;
+    margin: 80px auto 0;
+    padding-top: 24px;
+    min-height: 591px;
+    .share {
+      position: fixed;
+      top: 104px;
+      left: 50%;
+      margin-left: -665px;
+      width: 60px;
+      background: #f3f3f3;
+      .share-btn {
+        display: block;
+        width: 60px;
+        height: 60px;
+        text-align: center;
+        color: #ddd;
+        border-bottom: 1px solid #e9e9e9;
+        cursor: pointer;
+        position: relative;
+        line-height: 60px;
+        font-size: 28px;
+        &:hover {
+          height: 78px;
+          padding-top: 18px;
+          color: #fff;
+          &:after {
+            content: '分享到';
+            position: absolute; 
+            top: 10px; 
+            left: 12px;
+            line-height: 10px;
+            font-size: 10px;
+          }
+        }
+      }
+      .wx:hover {
+        background: #42b548;
+      }
+      .tsina:hover {
+        background: #49aafc;
+      }
+      .qq:hover {
+        background: #f47676;
+      }
+      .mai:hover {
+        background: #018be6;
+      }
+    }
+    .article-l {
+      width: 786px;
+      margin-right: 24px;
+      float: left;
+      position: relative;
+      .article-hd {
+        border-bottom: 1px solid #eee;
+        padding: 0 24px;
+        .article-tit {
+          font-size: 24px;
+          font-weight: bold;
+          padding: 10px 0;
+          line-height: 30px;
+          color: #000;
+        }
+        .article-info {
+          line-height: 40px;
+          color: #bcbcbc;
+          padding-bottom: 5px;
+          img {
+            border: 0;
+            vertical-align: middle;
+            margin-right: 5px;
+          }
+          .article-tag {
+            float: right;
+            width: 400px;
+            text-align: right;
+            .iconfont {
+              font-size: 12px;
+              margin-right: 5px;
+            }
+            span {
+              &:hover {
+                color: #ccc;
+                cursor: pointer;
+              }
+            }
+          }
+        }
+      }
+      .article-cnt {
+        padding: 15px 24px 30px;
+        line-height: 25px;
+        color: #666;
+        img {
+          max-width: 100%;
+        }
+      }
+      .article-ft {
+        width: 786px;
+        padding: 15px 24px 90px;
+        line-height: 20px;
+        border-top: 1px solid #eee;
+        li {
+          width: 349px;
+          color: #0098e1;
+          a {
+            color: #000;
+          }
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden;
+        }
+        .grey {
+          color: #ddd;
+        }
+        .article-last {
+          float: left;
+        }
+        .article-next {
+          float: right;
+        }
+      }
+    }
+    .article-r {
+      width: 380px;
+      float: right;
+      padding: 0 22px;
+      background: #f9f9f9;
+      .rcmd-tit {
+        line-height: 60px;
+        font-size: 16px;
+        color: #333;
+      }
+      .rcmd-list {
+        li {
+          line-height: 52px;
+          a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            &:hover {
+              color: #0098e1;
+            }
+          }
+          color: #000;
+          &:not(:last-of-type) {
+            border-bottom: 1px solid #e8e8e8;
+          }
+        }
+      }
+    }
+  }
+  
+}

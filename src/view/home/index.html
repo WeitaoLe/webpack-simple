@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>易观方舟_大数据用户行为分析平台_助力企业精益成长</title>
+<%- include('../common/_meta.html')%>
+<%- include('../common/_hm.html')%>
+  <meta name="keywords" content="易观方舟,数据采集,全端数据接入,私有化部署,实时查询,用户分群,用户画像,全景用户画像,用户分析,用户行为分析,大数据用户行为分析,精细化运营,运营闭环,用户触达,用户召回,精益成长"/>
+  <meta name="description" content="易观方舟通过全端数据采集，结合易观第三方数据，支持多模型多维度实时用户行为分析，实现多通道有效触达用户，用数据驱动用户精细化运营，助力企业精益成长。"/>
+  <meta name="baidu-site-verification" content="RBMD3nVN8Q" />
+</head>
+<body>
+	<%- include('../common/_hd.html')%>
+
+  <div class="wrapper banner">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 banner-left">
+          <!-- <h1 class="hd hd-1">易观方舟，数据驱动精益成长</h1> -->
+          <h1 class="hd hd-1">通过了解用户转化、留存的原因<br>实现业务快速增长</h1>
+          <div class="bd">
+            <!-- <p>
+              APP数据分析· <a href="${locals.baseUrl}/product-analytics.html">用户行为分析</a> · <a href="${locals.baseUrl}/access-others.html">全景用户画像</a> · <a href="${locals.baseUrl}/solution-webop.html">用户增长</a>
+            </p> -->
+            <p style="margin-top: 20px;">
+              分析用户在你网站和APP上的行为<br>
+              自定义用户分群后直接消息群发<br>
+              在易观方舟上可以进行一切增长试验数据验证
+            </p>
+            <!-- <p class="argoli">
+              2019全新发布：私有化部署、开放且免费的<a href="http://argo.analysys.cn/" target="_blank">易观方舟Argo</a>
+            </p> -->
+          </div>
+
+          <div class="ft" id="inLogined" style="display:none">
+            <a id="jDemoBtn" href="#none" class="demobtn zc" onclick="sdkDemoIndex('${locals.login.paasServer}/dashboard?projectType=demo')">体验Demo</a>
+            <a href="javascript:;" class="dc watchVedio">产品介绍视频</a>
+            <!-- <p class="text" style="margin-top: 15px">
+              <a onclick="pdfDown('https://argo.analysys.cn/portal/community-download.html')" href="javascript:;"><i class="iconfont icon-arrowdown"></i>下载易观方舟Argo</a>
+              <a onclick="pdfDown('http://ark.analysys.cn/portal/images/%E6%98%93%E8%A7%82%E6%96%B9%E8%88%9F%E4%BA%A7%E5%93%81%E4%BB%8B%E7%BB%8D.pdf')" style="margin-left: 20px" href="javascript:;"><i class="iconfont icon-arrowdown"></i>下载产品介绍PDF</a>
+              <a href="javascript:;" style="margin-left: 20px" class="watchVedio"><i class="iconfont icon-xingzhuang1"></i>&nbsp;观看产品介绍视频</a> 
+            </p> -->
+            <!-- <a href="javascript:;" node-type="toOrderDemo" class="dc">预约演示</a> -->
+           <!-- <a class="dc" href="/view/app/addlist.html">进入旧版</a> -->
+          </div>
+          <div class="ft" id="notLoined">
+            <a id="jDemoBtn" href="#none" class="demobtn zc" onclick="sdkDemoIndex('${locals.login.client}/view/sign/signup.html?projectType=demo')">体验Demo</a>
+            <a href="javascript:;" class="dc watchVedio">产品介绍视频</a>
+            <!-- <p class="text" style="margin-top: 15px">
+              <a onclick="pdfDown('https://argo.analysys.cn/portal/community-download.html')" href="javascript:;"><i class="iconfont icon-arrowdown"></i>下载易观方舟Argo</a>
+              <a onclick="pdfDown('${locals.login.client}/view/sign/signup.html')" href="javascript:;" style="margin-left: 20px"><i class="iconfont icon-arrowdown"></i>&nbsp;下载产品介绍PDF</a>
+            </p> -->
+            <!-- <a href="javascript:;" node-type="toOrderDemo" class="dc">预约演示</a> -->
+            <!-- <a class="dc" href="/view/sign/login.html">旧版登录</a> -->
+          </div>
+        </div>
+        <div class="col-md-12 right-box">
+          <div class="banner-right">
+            <div class="anime01"></div>
+            <div class="anime02"><a href="${locals.baseUrl}/product-analytics.html" style="display: block; width: 100%; height: 100%"></a></div>
+            <div class="anime03"><a href="${locals.baseUrl}/product-segmentation.html" style="display: block; width: 100%; height: 100%"></a></div>
+            <div class="anime04"></div>
+            <div class="anime05"><a href="${locals.baseUrl}/product-operate.html" style="display: block; width: 100%; height: 100%"></a></div>
+            <div class="anime06-decr1"></div>
+            <div class="anime06-decr2"></div>
+            <div class="anime06-squqre"></div>
+            <div class="anime07"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="vedio-wrapper">
+    <div class="topBar"><span id="closeVedio">×</span></div>
+    <div class="vedio-box">
+      <video id="myVideo" preload controls width="100%" height="100%" src=""></video>
+    </div>
+  </div>
+  <div class="th-naviga">
+    <div class="naviga-body">
+      <div class="navige-item">
+        <h3><i class="iconfont">&#xee6d;</i>常见问题</h3>
+        <p><a href="${locals.baseUrl}/question-index.html">如何寻找优质渠道，降低获客成本？</a></p>
+        <p><a href="${locals.baseUrl}/question-promote.html">如何提升付费转化率，增加企业收入？</a></p>
+        <p><a href="${locals.baseUrl}/question-optimize.html">如何快速优化营销效果，提升整体ROI？</a></p>
+      </div>
+      <div class="navige-item fxzd">
+        <h3><i class="iconfont">&#xe699;</i><a href="/blog/category/fenxizhidao/">数据分析方法</a></h3>
+      </div>
+      <div class="navige-item khzl">
+        <h3><i class="iconfont">&#xe882;</i><a href="/blog/category/ziliaoxiazai/">资料下载</a></h3>
+      </div>
+    </div>
+  </div>
+  <div class="main-func blue">
+    <div class="func-block">
+      <div class="wid33">
+        <h3 class="has-line-tit"><a href="${locals.baseUrl}/product-analytics.html">分析</a></h3>
+        <div class="p-box">
+          <p><a href="${locals.baseUrl}/product-analytics.html"><span>渠道分析：</span></a>不同渠道的流量来源及转化效果</p>
+          <p><a href="${locals.baseUrl}/product-analytics.html"><span>事件分析：</span></a>用户在APP、网站等应用上发生的行为</p>
+          <p><a href="${locals.baseUrl}/product-analytics.html"><span>转化漏斗：</span></a>用户在订单、注册转化效果如何？</p>
+          <p><a href="${locals.baseUrl}/product-analytics.html"><span>留存分析：</span></a>衡量用户健康度/参与度，深入了解留存与流失</p>
+          <p><a href="${locals.baseUrl}/product-analytics.html"><span>智能路径：</span></a>用户主要从哪条路径最终形成支付转化的？</p>
+        </div>
+        <div class="btn-box">
+          <a href="javascript:;" onclick="sdkDemoIndex('${locals.login.paasServer}/dashboard?projectType=demo')">体验Demo</a>
+        </div>
+        <div class="tag-box">
+          内置数据：
+          <a href="${locals.baseUrl}/solution-ec.html">电商</a>、
+          <a href="${locals.baseUrl}/solution-bank.html">银行</a>、
+          <a href="${locals.baseUrl}/solution-bond.html">证券</a>、
+          <a href="${locals.baseUrl}/solution-cmn.html">社区</a>、
+          <a href="${locals.baseUrl}/solution-edu.html">教育</a>、
+          <a href="${locals.baseUrl}/solution-sell.html">新零售</a>
+        </div>
+      </div>
+      <div class="wid66">
+        <img src="../../images/index/index-func-1.png" alt="">
+        <div class="gif">
+          <a href="https://growth.analysys.cn/dashboard?projectType=demo"><img src="../../images/index/gif-func-1.gif" alt=""></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="main-func">
+    <div class="func-block">
+      <div class="wid66">
+        <img src="../../images/index/index-func-2.png" alt="">
+        <div class="gif">
+          <a href="https://growth.analysys.cn/dashboard?projectType=demo"><img src="../../images/index/gif-func-2.gif" alt=""></a>
+        </div>
+      </div>
+      <div class="wid33">
+        <h3 class="has-line-tit"><a href="${locals.baseUrl}/product-segmentation.html">分群</a></h3>
+        <div class="p-box">
+          <p>方舟支持上报明细的用户属性数据，在用户分群后，可以进一步洞察分群的<a href="${locals.baseUrl}/access-others.html">全景画像</a>，为个性化触达、<a href="${locals.baseUrl}/product-operate.html">精准营销</a>、产品分析等做有效的数据支撑</p>
+          <p><a href="${locals.baseUrl}/access-others.html"><span>用户列表：</span></a>点击每个分群，可以进入查看分群中的用户明细</p>
+          <p><a href="${locals.baseUrl}/access-others.html"><span>单用户档案：</span></a>了解用户真实的访问足迹，对于发现产品关键流程中潜在问题、维护重要用户关系等具有重要意义</p>
+        </div>
+        <div class="btn-box">
+          <a href="javascript:;" onclick="sdkDemoIndex('${locals.login.paasServer}/dashboard?projectType=demo')">体验Demo</a>
+        </div>
+        <div class="tag-box">
+          内置数据：
+          <a href="${locals.baseUrl}/solution-ec.html">电商</a>、
+          <a href="${locals.baseUrl}/solution-bank.html">银行</a>、
+          <a href="${locals.baseUrl}/solution-bond.html">证券</a>、
+          <a href="${locals.baseUrl}/solution-cmn.html">社区</a>、
+          <a href="${locals.baseUrl}/solution-edu.html">教育</a>、
+          <a href="${locals.baseUrl}/solution-sell.html">新零售</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="main-func blue">
+    <div class="func-block">
+      <div class="wid33">
+        <h3 class="has-line-tit"><a href="${locals.baseUrl}/product-operate.html">精准营销</a></h3>
+        <div class="p-box">
+          <p>针对某些行为的用户进行消息群发、实现精准营销</p>
+          <p>例如：放弃购物车的用户激活、沉睡用户唤醒</p>
+          <p><span>APP消息通知：</span>APP消息推送，唤醒、促活、增加用户粘性</p>
+          <p><span>EDM邮件群发：</span>预置常用模板、针对共同特征用户邮件群发，实现精准营销</p>
+          <p><span>短信：</span>针对已分群用户进行短信群发，实现精准营销</p>
+        </div>
+        <div class="btn-box">
+          <a href="javascript:;" onclick="sdkDemoIndex('${locals.login.paasServer}/dashboard?projectType=demo')">体验Demo</a>
+        </div>
+        <div class="tag-box">
+          内置数据：
+          <a href="${locals.baseUrl}/solution-ec.html">电商</a>、
+          <a href="${locals.baseUrl}/solution-bank.html">银行</a>、
+          <a href="${locals.baseUrl}/solution-bond.html">证券</a>、
+          <a href="${locals.baseUrl}/solution-cmn.html">社区</a>、
+          <a href="${locals.baseUrl}/solution-edu.html">教育</a>、
+          <a href="${locals.baseUrl}/solution-sell.html">新零售</a>
+        </div>
+      </div>
+      <div class="wid66">
+        <img src="../../images/index/index-func-3.png" alt="">
+        <div class="gif">
+          <a href="https://growth.analysys.cn/dashboard?projectType=demo"><img src="../../images/index/gif-func-3.gif" alt=""></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="scene">
+    <h3 class="has-line-tit">从这些场景开始，用数据驱动精益成长</h3>
+    <ul>
+      <li>
+        <img src="../../images/index/scene-1.png" alt="">
+        <h4><a href="${locals.baseUrl}/solution-pm.html">产品运营</a></h4>
+        <p>构建用户池，沉淀<a href="${locals.baseUrl}/access-others.html">用户标签</a>、用户行为、<a href="${locals.baseUrl}/access-others.html">用户画像</a>，通过行为分析优化产品易用性，挖掘用户的产品功能喜好，逐步优化产品（网站、APP、H5、小程序）</p>
+      </li>
+      <li>
+        <img src="../../images/index/scene-2.png" alt="">
+        <h4><a href="${locals.baseUrl}/solution-marketer.html">市场运营/数字营销</a></h4>
+        <p>分析流量渠道转化效果（SEM、公众号、EDM等），通过A/B测试，着陆页优化驱动数据增长，利用用户行为对<a href="${locals.baseUrl}/product-segmentation.html">用户分群</a>，实现<a href="${locals.baseUrl}/product-operate.html">精准营销</a></p>
+      </li>
+      <li>
+        <img src="../../images/index/scene-3.png" alt="">
+        <h4><a href="/blog/">精益成长/增长</a></h4>
+        <p>通过渠道分析管理流量渠道的转化效果，找到ROI更高的广告渠道上，通过A/B测试，不断的进行增长实验，提高转化率</p>
+      </li>
+      <li>
+        <img src="../../images/index/scene-4.png" alt="">
+        <h4><a href="${locals.baseUrl}/access-others.html" target="_blank">用户画像/标签</a></h4>
+        <p>网站、APP、H5全渠道数据采集，刻画更完整的用户画像（用户档案），丰富的用户属性标签</p>
+      </li>
+      <li>
+        <img src="../../images/index/scene-5.png" alt="">
+        <h4><a href="${locals.baseUrl}/access-others.html">用户行为</a></h4>
+        <p>记录用户从着陆到产品体验中完整用户行为、洞察用户终端信息，浏览器信息，了解用户流失状态以及体验中遇到的问题，完整的了解你的用户做了什么</p>
+      </li>
+      <li>
+        <img src="../../images/index/scene-6.png" alt="">
+        <h4><a href="${locals.baseUrl}/product-segmentation.html">分群</a>/<a href="${locals.baseUrl}/product-operate.html">营销闭环</a></h4>
+        <p>根据共同行为或标签进行用户分群，分群后可以定向群发EDM、短信、站内推送，使营销更精准，转化率更高</p>
+      </li>
+    </ul>
+  </div>
+  <div class="advantage">
+    <h3 class="has-line-tit">易观方舟的优势</h3>
+    <ul class="cbox">
+      <li>
+        <div class="topImg">
+          <img src="../../images/index/advantage-1.png" alt="">
+        </div>
+        <h4>多年数据分析经验</h4>
+        <p>基于易观十九年数据分析经验积累与底蕴，易观更了解用户实际使用需求，适配于多种用户使用场景</p>
+      </li>
+      <li>
+        <div class="topImg">
+          <img src="../../images/index/advantage-2.png" alt="">
+        </div>
+        <h4>多种产品版本</h4>
+        <p>针对不同企业用户的部署偏好，易观方舟提供易观方舟Argo、单机商业版、企业集群版、公有云版等</p>
+      </li>
+      <li>
+        <div class="topImg">
+          <img src="../../images/index/advantage-3.png" alt="">
+        </div>
+        <h4>用户运营解决方案</h4>
+        <p>不仅提供多版本的易观方舟，还可以结合易观千帆、易观万像等构建完整用户运营体系，实现更精细运营</p>
+      </li>
+      <li>
+        <div class="topImg">
+          <img src="../../images/index/advantage-4.png" alt="">
+        </div>
+        <h4>用户成功体系</h4>
+        <p>我们重视每一个客户，不仅仅提供产品，还提供部署服务、制定增长建议与方案，与你一起达成用户成功</p>
+      </li>
+    </ul>
+    <div class="btn-box">
+      <a href="javascript:;" onclick="sdkDemoIndex('${locals.login.paasServer}/dashboard?projectType=demo')">体验Demo</a>
+    </div>
+  </div>
+  <div class="passengers">
+    <h3 class="has-line-tit">易观方舟的伙伴</h3>
+    <div class="company-box">
+      <ul>
+        <li><img src="../../images/index/passengers/plogo_03.jpg" alt=""></li>
+        <li><img src="../../images/index/passengers/plogo_05.jpg" alt=""></li>
+        <li><img src="../../images/index/passengers/plogo_07.jpg" alt=""></li>
+        <li><img src="../../images/index/passengers/plogo_08.jpg" alt=""></li>
+        <li><img src="../../images/index/passengers/plogo_09.jpg" alt=""></li>
+        <li><img src="../../images/index/passengers/plogo_11.jpg" alt=""></li>
+        <li><img src="../../images/index/passengers/plogo_12.jpg" alt=""></li>
+        <li><img src="../../images/index/passengers/plogo_13.jpg" alt=""></li>
+        <li><img src="../../images/index/passengers/plogo_15.jpg" alt=""></li>
+        <li><img src="../../images/index/passengers/plogo_16.jpg" alt=""></li>
+        <li><img src="../../images/index/passengers/plogo_21.jpg" alt=""></li>
+        <li><img src="../../images/index/passengers/plogo_23.jpg" alt=""></li>
+        <li><img src="../../images/index/passengers/plogo_24.jpg" alt=""></li>
+        <li><img src="../../images/index/passengers/plogo_25.jpg" alt=""></li>
+        <li><img src="../../images/index/passengers/plogo_28.jpg" alt=""></li>
+        <li><img src="../../images/index/passengers/plogo_29.jpg" alt=""></li>
+        <li><img src="../../images/index/passengers/plogo_30.jpg" alt=""></li>
+        <li><img src="../../images/index/passengers/plogo_33.jpg" alt=""></li>
+        <li><img src="../../images/index/passengers/plogo_38.jpg" alt=""></li>
+        <li><img src="../../images/index/passengers/plogo_39.jpg" alt=""></li>
+        <li><img src="../../images/index/passengers/plogo_40.jpg" alt=""></li>
+      </ul>
+    </div>
+    <div class="human-box">
+      <ul>
+        <li>
+          <div class="human-cube">
+            <img src="../../images/index/human-douhao.png" alt="" class="dou">
+            <p class="pte">一款产品好不好，只有传递到用户手里使用起来才能发挥价值，易观方舟Argo社区能够及时找到产品学习和更快解决问题的专门途径</p>
+            <div class="man">
+              <img src="../../images/index/human-logo-1.png" alt="">
+              <div class="man-text">
+                <h4>冯&nbsp;雷</h4>
+                <h5>Pivotal中国公司常务董事兼研发中心总经理</h5>
+                <span class="line"></span>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="human-cube">
+            <img src="../../images/index/human-douhao.png" alt="" class="dou">
+            <p class="pte">数据产品选择而言，从业务角度，算法的准确性和有效性比快慢更重要，易观方舟Argo的算法里IOTA架构很有意思，它的算法很适合业务初期的企业进行有效的数据分析</p>
+            <div class="man">
+              <img src="../../images/index/human-logo-2.png" alt="">
+              <div class="man-text">
+                <h4>谢&nbsp;耘</h4>
+                <h5>中科院工程师资格评审委员会主任</h5>
+                <span class="line"></span>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="human-cube">
+            <img src="../../images/index/human-douhao.png" alt="" class="dou">
+            <p class="pte">这段时间我们把易观方舟Argo推荐给更多机构，我们希望让更多的人来了解Argo，站在机构角度，我们关心一款产品是否免费，但我们更关注产品品质，真正能够对我们有用</p>
+            <div class="man">
+              <img src="../../images/index/human-logo-3.png" alt="">
+              <div class="man-text">
+                <h4>徐&nbsp;勇</h4>
+                <h5>中关村天使投资联盟秘书长</h5>
+                <span class="line"></span>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="min-screen-cta">
+    <h3>易观方舟，数据驱动营销闭环</h3>
+    <p>获客增长 · 行为分析 · 转化 · 营销闭环<br>低成本获客，全渠道精准触达，帮助企业提高ROI</p>
+    <div class="btn-box">
+      <a href="javascript:;" onclick="sdkDemoIndex('${locals.login.paasServer}/dashboard?projectType=demo')">体验Demo</a>
+    </div>
+  </div>
+  
+  <div class="max-screen-cta">
+  <%- include('../common/_demo.html')%>
+  </div>
+	<%- include('../common/_ft.html')%>
+  <script type="text/javascript">
+    var sdkDemoIndex = function(v) {
+      AnalysysAgent.track('experience_demo', {
+        'referrer_demo': '官网首页头部banner'
+      })
+      window.location.href = v
+    }
+    var pdfDown = function(v) {
+      AnalysysAgent.track('pdf_down', {
+        'referrer_demo': '下载产品PDF'
+      })
+      window.location.href = v
+    }
+  </script>
+  <script>
+    var server = '${locals.login.server}';
+    var client= '${locals.login.client}';
+  </script>
+</body>
+</html>

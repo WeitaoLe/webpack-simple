@@ -1,0 +1,20 @@
+
+.v-tab {
+  float: left;
+  margin-left: 10px;
+  border: solid $color-primary-blue 1px;
+  border-radius: 3px;
+  line-height: 30px;
+  font-size: 14px;
+  color: #0098e1;
+  cursor: pointer;
+  span{
+    float: left;
+    width: 50px;
+    text-align: center;
+    &.act {
+      color: #fff;
+      background: $color-primary-blue;
+    }
+  }
+}

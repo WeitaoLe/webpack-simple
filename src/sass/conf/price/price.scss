@@ -1,0 +1,392 @@
+@import '../../common';
+
+body {
+  background: #fff;
+}
+
+$color-blue: #0098e1;
+$color-orange: #fe9b63;
+
+.m-header {
+  height: 80px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  background: $color-blue;
+}
+.p-price {
+  .m-banner {
+    position: relative;
+    margin-top: 80px;
+    background: #34b6f6;
+    background: linear-gradient(to right, #34b6f6 , #6f5af8);
+    background-image: linear-gradient(to right, #34b6f6, #6f5af8);
+    .txt-banner {
+      width: 100%;
+      padding: 70px 0;
+      font-size: 36px;
+      line-height: 36px;
+      color: #fff;
+      text-align: center;
+      text-shadow: 0px 2px 4px rgba(0,0,0,0.36);
+    }
+    .m-plans {
+      text-align: center;
+      .m-plans-li {
+        position: relative;
+        margin: 20px 0;
+        padding: 0;
+        box-shadow: 3px 0 7px rgba(31,72,165,0.05), -3px 0 7px rgba(31,72,165,0.05), 0 3px 7px rgba(31,72,165,0.05);
+        background: #fff;
+        &:not(:last-of-type) {
+        }
+        .plans-pic {
+          height: 170px;
+          img {
+            margin-top: 25px;
+          }
+        }
+        .recomend-icon {
+          position: absolute;
+          right: 0;
+          top: 0;
+        }
+        .plans-tit {
+          height: 40px;
+          line-height: 40px;
+          font-size: 24px;
+        }
+        .plans-sub-58 {
+          height: 58px;
+          line-height: 58px;
+        }
+        .plans-info {
+          margin-top: 10px;
+          line-height: 35px;
+          height: 180px;
+        }
+        .plans-showmore {
+          font-size: 14px;
+          height: 40px;
+          line-height: 40px;
+          margin-top: 38px;
+          background: #f5f9fd;
+          a {
+            line-height: 14px;
+            color: $color-blue;
+            cursor: pointer;
+          }
+        }
+        .plans-btn {
+          position: relative;
+          width: 160px;
+          height: 52px;
+          margin: 0 auto;
+          cursor: pointer;
+          span {
+            position: absolute;
+            font-size: 14px;
+            line-height: 14px;
+            top: 13px;
+            left: 52px;
+            color: #fff;
+          }
+          &:hover {
+            opacity: 0.8;
+          }
+        }
+      }
+    }
+  }
+
+
+  .m-compare {
+    margin: 40px auto 0;
+    .init-show {
+      table {
+        width: 100%
+      }
+    }
+    .txt-compare {
+      height: 30px;
+      line-height: 30px;
+      font-size: 30px;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .compare-thead {
+      height: 50px;
+      border-bottom: 1px solid #e9ecf1;
+      tr {
+        td {
+          font-size: 18px;
+          font-weight: bold;
+          &:first-of-type{
+            width: 300px;
+            //text-indent: 6px;
+            padding-left: 6px;
+            font-weight: bold;
+          }
+          &:not(:first-of-type) {
+            width: 251px;
+            text-align: center;
+          }
+          &.hd-li-tit {
+            line-height: 50px;
+          }
+        }
+      }
+      li {
+        float: left;
+        height: 60px;
+        flex:1;
+        font-size: 18px;
+        line-height: 60px;
+        font-weight: bold;
+        &:first-of-type{
+          overflow:hidden;
+          //text-indent: 6px;
+          padding-left: 6px;
+          color: #434e5a;
+        }
+        &:not(:first-of-type) {
+          text-align: center;
+        }
+        .hd-li-tit {
+          color: #333;
+        }
+
+      }
+    }
+    .thead-fix {
+      position: fixed;
+      background: #fff;
+      top: 80px;
+      z-index: 2;
+      padding-right:15px;
+    }
+    .compare-table {
+      tr{
+        height: 40px;
+        font-size: 14px;
+        color: #434e5a;
+        &:nth-of-type(2n){
+          background: #f4f9fd;
+        }
+        td {
+          &:first-of-type{
+            width: 300px;
+            //text-indent: 6px;
+            padding-left: 6px;
+            font-weight: bold;
+            text-align:justify;
+          }
+          &:not(:first-of-type) {
+            width: 251px;
+            text-align: center;
+          }
+        }
+      }
+    }
+    .compare-tit {
+      margin-top: 30px;
+      height: 60px;
+      line-height: 60px;
+      //text-indent: 6px;
+      padding-left: 6px;
+      font-size: 18px;
+      color: #434e5a;
+      font-weight: bold;
+      border-bottom: 1px solid #e9ecf1;
+    }
+    .moretable {
+      display: none;
+    }
+    .showmore {
+      position: relative;
+      width: 100%;
+      height: 1px;
+      background: #e0e8f3;
+      margin-top: 30px;
+      .morebtn {
+        position: absolute;
+        width: 74px;
+        height: 28px;
+        left: 50%;
+        margin-left: -37px;
+        top: -13px;
+        line-height: 28px;
+        background: #fff;
+        border-radius: 14px;
+        color: #444;
+        text-align: center;
+        font-size: 12px;
+        box-shadow: 0px 1px 4px rgba(4, 74, 161, 0.26);
+        cursor: pointer;
+      }
+    }
+  }
+
+  .m-ft {
+    min-width: 1190px;
+    height: 275px;
+    margin-top: 30px;
+    background: #f4f9fd;
+    .ft-mbox {
+      width: 1150px;
+      height: 100%;
+      margin: 0 auto;
+      background: url(../../../images/price-ft-bg.png) no-repeat right bottom;
+      .ft-tit {
+        width: 100%;
+        font-size: 16px;
+        color: #103363;
+        font-weight: bold;
+        height: 80px;
+        line-height: 40px;
+        padding-top: 40px;
+      }
+      .ft-cnt {
+        width: 100%;
+        height: 195px;
+        font-size: 14px;
+        .ft-list {
+          float: left;
+          width: 272px;
+          line-height: 40px;
+        }
+      }
+
+    }
+  }
+
+  .font-24-3 {
+    font-size: 24px;
+    color: #333;
+  }
+  .font-14-3 {
+    font-size: 14px;
+    color: #333;
+  }
+  .font-18-blue {
+    font-size: 18px;
+    color: $color-blue;
+  }
+  .icon-s {
+    font-size: 12px;
+  }
+  .icon-m-ligntblue {
+    font-size: 14px;
+    color: #92d2f2;
+  }
+  .icon-l-check {
+    font-size: 20px;
+    color: #00a0e9;
+  }
+  .icon-l-close {
+    font-size: 20px;
+    color: #ff9b39;
+  }
+  .icon-s-hover {
+    font-size: 14px;
+    color: #92d2f2;
+    cursor: pointer;
+    position: relative;
+    &:hover {
+      color: #33ade7;
+      .speech-bubble {
+        display: block;
+      }
+    }
+  }
+  .icon-position {
+    position: relative;
+    i {
+      position: absolute;
+      left: 22px;
+      top: 2px;
+      font-size: 12px;
+    }
+  }
+  .speech-bubble {
+    position: absolute;
+    display: none;
+    background-color: #343f4b;
+    padding: 10px 15px;
+    line-height: 20px;
+    color: white;
+    left: 30px;
+    top: -10px;
+    border-radius: 1px;
+    font-size: 12px;
+    text-align: left;
+    text-indent: 0;
+    &:after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 0;
+      border: 7px solid;
+      border-color: #f4f9fd;
+      border-right-color: #343f4b;
+      top: 10px;
+      right: 100%;
+    }
+  }
+  .bubble-width-w {
+    width: 140px;
+  }
+  .bubble-width-s {
+    width: 80px;
+  }
+  .color-blue {
+    color: $color-blue;
+  }
+  .color-orange {
+    color: $color-orange;
+  }
+}
+
+#kf5-support-btn {
+  display: none !important;
+}
+
+@media only screen and (max-width: 425px) {
+  .thead-fix {
+    width: calc(100% - 30px) !important;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .thead-fix {
+    width: calc(750px - 30px) !important;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+
+  .m-plans-li {
+    width: calc(33.33333333% - 10px);
+    margin-right: 10px !important;
+  }
+
+  .thead-fix {
+    width: calc(970px - 30px) !important;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .thead-fix {
+    width: calc(1170px - 30px) !important;
+  }
+}
+
+@media (max-width: 1000px) {
+  .p-price .m-banner {
+    margin-top: 56px;
+  }
+}
+
+
+

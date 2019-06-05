@@ -1,0 +1,184 @@
+/**
+
+复合型表头的表格，加上v-head-composite和v-tbody-composite，表头第一行加head-tr-1，第二行需要右边框的单元格加上border-r,下边框border-b
+表格内容带icon的，加上v-tbody-withicon
+
+@author Liweitao
+
+@example
+
+## 复合表格示例
+
+```html
+<table class="v-table">
+  <thead class="v-thead v-head-composite">
+    <tr class="head-tr-1">
+      <td rowspan="2" class="text-xs-left">APP</td>
+      <td colspan="3">人群A</td>
+      <td colspan="3">人群B</td>
+      <td colspan="3">人群C</td>
+    </tr>
+    <tr>
+      <td>用户占比</td>
+      <td>人均使用时长</td>
+      <td class="border-r">人均使用次数</td>
+      <td>用户占比</td>
+      <td>人均使用时长</td>
+      <td class="border-r">人均使用次数</td>
+      <td>用户占比</td>
+      <td>人均使用时长</td>
+      <td>人均使用次数</td>
+    </tr>
+  </thead>
+  <tbody class="v-tbody v-tbody-withicon v-tbody-composite">
+    <tr>
+      <td class="border-r">12311</td>
+      <td>2311231</td>
+      <td>234234</td>
+      <td class="border-r">12311</td>
+      <td>2311231</td>
+      <td>234234</td>
+      <td class="border-r">12311</td>
+      <td>2311231</td>
+      <td>234234</td>
+      <td>234234</td>
+    </tr>
+  </tbody>
+</table>
+```
+
+## 简单三线式表格：
+
+```html
+<table class="v-table">
+  <thead class="v-thead">
+    <tr>
+      <td>人群A</td>
+      <td>人群B</td>
+      <td>人群C</td>
+    </tr>
+  </thead>
+  <tbody class="v-tbody">
+    <tr>
+      <td>2311231</td>
+      <td>234234</td>
+      <td>2311231</td>
+    </tr>
+  </tbody>
+</table>
+```
+
+*/
+
+$v-thead-border: 1px solid #d4e1f7;
+$v-tbody-border: 1px solid #f2f6fd;
+
+.v-table {
+  min-width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+  border-spacing: 0;
+
+  > thead, .v-thead {
+    color: #666;
+    user-select: none;
+    tr {
+      height: 32px;
+      &:first-of-type{
+        font-weight: bold;
+      }
+      td {
+        border: 0;
+        background: #ecf3ff;
+      }
+    }
+  }
+
+  // Add by allex to extends for <v-data-table />
+  th {
+    font-size: 12px;
+    .asc-desc {
+      width: 12px;
+      display: inline-block;
+      cursor: pointer;
+      position: relative;
+      line-height: 6px;
+      top: 4px;
+      user-select: none;
+      padding: 0;
+      text-align: left;
+      text-indent: 0;
+      margin-left: 2px;
+      i { display: block; font-size: 12px; height: 7px; color: #c3cbd6; transition: color .2s ease-in-out; }
+    }
+    &.sortable {
+      cursor: pointer;
+      &.active {
+        &.asc .v-icon-asc,
+        &.desc .v-icon-desc{ color: #3f95ff; }
+      }
+    }
+  }
+  .text-xs-left {
+    text-indent: 18px;
+    text-align: left;
+  }
+  .text-xs-right {
+    text-align: right;
+    padding-right: 20px;
+  }
+
+  > tbody, .v-tbody {
+    tr {
+      height: 40px;
+      td {
+        border: 0;
+        border-bottom: $v-tbody-border;
+      }
+    }
+  }
+
+  .v-head-composite {
+    .border-r {
+      border-right: $v-thead-border;
+    }
+    .border-b {
+      border-bottom: $v-thead-border;
+    }
+    .head-tr-1 {
+      td {
+        &:not(:last-of-type) {
+          border-right: $v-thead-border;
+        }
+      }
+    }
+  }
+
+  .v-tbody-withicon {
+    tr {
+      height: 50px;
+    }
+  }
+
+  .v-tbody-composite {
+    .border-r {
+      border-right: $v-tbody-border;
+    }
+  }
+  .col+.col{
+    border-left: 1px solid #D4E1F7;
+  }
+  tr{
+    td+td{
+      border-left: 1px solid #F2F6FD;
+    }
+  }
+  tr+tr{
+    th{
+      &.col{
+        border-top: 1px solid #D4E1F7;
+      }
+    }
+  }
+
+}

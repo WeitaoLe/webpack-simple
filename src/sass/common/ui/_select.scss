@@ -1,0 +1,127 @@
+
+$border-select-grey: 1px solid #f6f6f6;
+
+.v-select {
+  position: relative;
+  span {
+      color: $color-primary-blue;
+    }
+    .state {
+      cursor: pointer;
+      display: inline-block;
+      line-height: 24px;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    .v-dropdown-single {
+      width: 185px;
+      .searchbox {
+        input {
+          width: 145px;
+        }
+      }
+    }
+    .v-dropdown-multiple {
+      width: 220px;
+      .searchbox {
+        input {
+          width: 180px;
+        }
+      }
+    }
+
+    .v-dropdown {
+        position: absolute;
+        max-height: 280px;
+        top: 27px;
+        z-index: 1;
+        background: #fff;
+        box-shadow: 0px 2px 10px rgba(153, 153, 153, 0.5);
+        border-radius: 3px;
+        font-size: 12px;
+        .v-dropdown-list {
+            padding: 0 8px;
+            cursor: pointer;
+            line-height: 35px;
+            width: 100%;
+            overflow: hidden;
+            height: 35px;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+           &:hover {
+              background: #f6f6f6;
+            }
+          }
+          .add-crowd {
+            color: $color-primary-blue;
+            border-bottom: $border-select-grey;
+            i {
+              margin-right: 5px;
+            }
+          }
+          .describe {
+            color: #cdcdcd;
+            border-top: $border-select-grey;
+            cursor: auto;
+            &:hover {
+              background: #fff;
+            }
+          }
+          .searchbox {
+            padding: 0 8px;
+            height: 34px;
+            border-bottom: $border-select-grey;
+            font-size: 12px;
+            color: #b9bebe;
+            position: relative;
+            i {
+              position: absolute;
+              top: 13px;
+              line-height: 12px;
+            }
+            input {
+              border: 0;
+              padding-left: 18px;
+              line-height: 30px;
+              margin-top: 3px;
+            }
+          }
+          .ft {
+            padding: 2px 4px;
+            height: 32px;
+            border-top: $border-select-grey;
+            span {
+              float: right;
+              display: inline-block;
+              width: 50px;
+              height: 28px;
+              line-height: 28px;
+              text-align: center;
+              cursor: pointer;
+            }
+            .cancle {
+              color: #999999;
+            }
+            .confirm {
+              border-radius: 4px;
+              color: #fff;
+              background: #0098e1;
+            }
+      }
+  }
+      
+  ::-webkit-input-placeholder { 
+    color: #b9bebe; 
+  } 
+  :-moz-placeholder {
+    color: #b9bebe; 
+  } 
+  ::-moz-placeholder {
+    color: #b9bebe; 
+  } 
+  :-ms-input-placeholder { 
+    color: #b9bebe; 
+  } 
+}
+

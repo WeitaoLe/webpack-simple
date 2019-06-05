@@ -1,0 +1,113 @@
+#p-question {
+  .banner-text {
+    padding: 60px 0 30px;
+  }
+  .has-btn {
+    height: 70px;
+    text-align: center;
+    .v-btn{
+      font-size: 14px;
+      color: #fff;
+      border-radius: 100px;
+      background: #2c8cfb;
+      padding: 0px 24px;
+      height: 36px;
+      line-height: 36px;
+      border-radius:88px;
+      background-image:linear-gradient(90deg, #feb167, #ff8f5f);
+    }
+  }
+  .qaa-banner {
+    margin: 0 auto;
+    padding-top: 20px;
+    img {
+      width: 100%;
+    }
+    .bac {
+      position: relative;
+      width: 700px;
+      margin: 0 auto;
+    }
+    .text {
+      position: absolute;
+      top: 50px;
+      left: 160px;
+      text-align: left;
+      color: #333;
+      font-size: 14px;
+      line-height: 21px;
+    }
+  }
+  .img-aniBox {
+    position: relative;
+    top: -57px;
+    left: 25px;
+    img {
+      position: absolute;
+      width: 450px;
+      height: 350px;
+      transition: top .3s, right .3s, left .3s;
+      &.img1 {
+        top: 0;
+        left: 0;
+        z-index: 3;
+        box-shadow: -10px 5px 30px 5px rgba(120, 120, 120, .15);
+      }
+      &.img2 {
+        top: 36px;
+        left: 170px;
+        z-index: 2;
+        box-shadow: -5px 5px 20px 2px rgba(120, 120, 120, .08);
+      }
+    }
+  }
+}
+
+@media (max-width: 430px) {
+  #p-question {
+    .qaa-banner {
+      .bac {
+        width: 350px;
+        height: 200px;
+        img {
+          height: 100%;
+        }
+      }
+      .text {
+        top: 34px;
+        left: 85px;
+        font-size: 12px;
+        line-height: 15px;
+        max-width: 216px;
+      }
+    }
+    .htdz {
+      height: 200px;
+      .img-aniBox {
+        left: 0;
+        top: -47px;
+        img {
+          width: 273px;
+          height: 217px;
+          &.img2 {
+            left: 70px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 330px) {
+  #p-question {
+    .htdz {
+      .img-aniBox {
+        img {
+          &.img2 {
+            left: 20px;
+          }
+        }
+      }
+    }
+  }
+}

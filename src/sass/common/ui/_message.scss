@@ -1,0 +1,76 @@
+.e-message {
+	border-radius: 4px;
+	position: fixed;
+	top: 20px;
+	box-shadow: 0 1px 6px rgba(0,0,0,.2);
+	left: 50%;
+	padding: 10px 20px 10px 45px;
+	font-size: 12px;
+	z-index: 10000000;
+	transform: translate(-50%,0);
+	color: #fff;
+	.fonticon {
+		font-size: 16px;
+		position: absolute;
+    	top: 7px;
+    	left: 20px;
+	}
+	&.success{
+		background: #0cb05e;
+	}
+	&.error{
+		background: #e45a55;
+	}
+	&.warning{
+		background: #f3aa0c;
+	}
+	&.info{
+		background: #29b6f6;
+	}
+	.fonticon {
+		font-family: 'iconfont';
+		margin-right: 5px;
+	}
+	.error {
+		&:before {
+			content: '\ee5f';
+		}
+	}
+	.success {
+		&:after {
+			content: '\ee61';
+		}
+	}
+	.warning {
+		&:after {
+			content: '\ee5d';
+		}
+	}
+	.info {
+		&:after {
+			content: '\ee59';
+		}
+	}
+}
+.fadeInDown {
+	animation: fadeInDown .5s 0s ease both;
+}
+@keyframes fadeInDown {
+	0%{opacity:0;
+		top: -30px
+	}
+	100%{opacity:1;
+		top: 20px
+	}
+}
+.fadeInTopOut {
+	animation: fadeInTopOut .6s 0s ease both;
+}
+@keyframes fadeInTopOut {
+	0%{opacity:1;
+		top: 20px
+	}
+	100%{opacity:0;
+		top: -30px
+	}
+}

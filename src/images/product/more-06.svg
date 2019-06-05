@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="63.91" height="63.62" viewBox="0 0 63.91 63.62">
+  <metadata><?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c140 79.160451, 2017/05/06-01:08:21        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description rdf:about=""/>
+   </rdf:RDF>
+</x:xmpmeta>
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                           
+<?xpacket end="w"?></metadata>
+<defs>
+    <style>
+      .cls-1 {
+        fill-rule: evenodd;
+        fill: url(#linear-gradient);
+        filter: url(#filter);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="1488.625" y1="4115.25" x2="1488.625" y2="4054.38" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2486ed"/>
+      <stop offset="1" stop-color="#38b8f2"/>
+    </linearGradient>
+    <filter id="filter" x="1458.09" y="4054.38" width="63.91" height="63.62" filterUnits="userSpaceOnUse">
+      <feOffset result="offset" dx="2.427" dy="1.763" in="SourceAlpha"/>
+      <feGaussianBlur result="blur"/>
+      <feFlood result="flood" flood-color="#cee3fa"/>
+      <feComposite result="composite" operator="in" in2="blur"/>
+      <feBlend result="blend" in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <path id="形状_1394" data-name="形状 1394" class="cls-1" d="M1486.05,4087.28v-27.87a27.523,27.523,0,0,0-10.89,2.23,27.869,27.869,0,0,0-8.9,5.99,28.357,28.357,0,0,0-6,8.89,27.8,27.8,0,0,0,.06,21.63,27.8,27.8,0,0,0,6,8.89,28.385,28.385,0,0,0,8.91,6,27.771,27.771,0,0,0,21.76,0,28.092,28.092,0,0,0,14.91-14.89,27.417,27.417,0,0,0,2.22-10.87h-4.33m7.14-15.8a28.016,28.016,0,0,0-6.03-8.92,28.545,28.545,0,0,0-8.94-6.01,28.2,28.2,0,0,0-10.88-2.16h-2.17v30.15h30.26v-2.16A27.58,27.58,0,0,0,1516.93,4071.48Zm-21.16.64,5.14-5.12a0.53,0.53,0,0,1,.06-0.1,0.948,0.948,0,0,1,1.34,0c0.01,0.02.02,0.03,0.03,0.05l4.51,4.49,4.46-4.44a0.53,0.53,0,0,1,.06-0.1,0.948,0.948,0,1,1,1.34,1.34,1.01,1.01,0,0,1-.16.13l-5.07,5.06a0.929,0.929,0,0,1-1.31,0,0.7,0.7,0,0,1-.1-0.16l-4.42-4.4-4.57,4.56A0.926,0.926,0,0,1,1495.77,4072.12Zm17.22,7.23H1492.2a0.941,0.941,0,0,1-.95-0.94v-13.19a0.945,0.945,0,1,1,1.89,0v12.25H1513A0.955,0.955,0,1,1,1512.99,4079.35Z" transform="translate(-1458.09 -4054.38)"/>
+</svg>

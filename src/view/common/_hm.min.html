@@ -1,0 +1,94 @@
+<!-- stat -->
+<!--
+<script>
+(function(window, fz) {
+  var pending = [], ready = 1;
+  fz.setup = function(o) {
+    ready ^= 1;
+    fz = o || window.fz || [];
+    fz.ready = function(fn) {
+      if (ready) fz.processReady(fz);
+      else pending.push(fn);
+    };
+    fz.processReady = function(fz) { var f; while (f = pending.shift()) f(fz) };
+    window.fz = fz;
+  }
+  fz.setup();
+  !function(n,o,t,e){e=1,(n.addEventListener||(e=0,n.attachEvent))(e?o:"on"+o,t)}(window,"load",function(e){
+    fz.methods = 'DEBUG init open pageTAG setUInfo setPID delUInfo event openAPP'.split(' ');
+    fz.factory = function(b) {
+      return function() {
+        var a = Array.prototype.slice.call(arguments);
+        a.unshift(b);
+        fz.push(a);
+        return fz;
+      }
+    };
+    for (var i = 0; i < fz.methods.length; i++) {
+      var key = fz.methods[i];
+      fz[key] = fz.factory(key);
+    }
+    var d = document, c = d.createElement('script'), n = d.getElementsByTagName('script')[0];
+    c.onload = function() {
+      fz.setup(window.fz);
+      setTimeout(function() { fz.processReady(fz) }, 1)
+    };
+    c.type = 'text/javascript';
+    c.async = true;
+    c.defer = true;
+    c.id = 'devSDK';
+    c.src = '${locals.sdk.url}?v=' + ~~(new Date() / 86400);
+    n.parentNode.insertBefore(c, n);
+    fz.DEBUG = true;
+  });
+})(window, (window.fz = window.fz || []));
+</script>
+
+  -->
+
+
+<!--
+<script>
+    (function(config) {
+        window.AnalysysAgent = window.AnalysysAgent || []
+        window.AnalysysAgent.methods = 'identify alias getDistinctId reset track profileSet profileSetOnce profileIncrement profileAppend profileAppendArray profileUnset profileDelete registerSuperProperty unregisterSuperProperty clearSuperProperties getSuperProperty getSuperProperties getUpLoadLog pageView DEBUG auto appkey name setUploadURL hash setVisitorConfigURL'.split(' ');
+
+        function factory(b) {
+            return function() {
+                var a = Array.prototype.slice.call(arguments);
+                a.unshift(b);
+                window.AnalysysAgent.push(a);
+                return window.AnalysysAgent;
+            }
+        };
+        for (var i = 0; i < AnalysysAgent.methods.length; i++) {
+            var key = window.AnalysysAgent.methods[i];
+            AnalysysAgent[key] = factory(key);
+        }
+        for (var key in config) {
+            AnalysysAgent[key](config[key])
+        }
+        var date = new Date();
+        var time = new String(date.getFullYear()) + new String(date.getMonth() + 1) + new String(date.getDate());
+
+        var d = document,
+            c = d.createElement('script'),
+            n = d.getElementsByTagName('script')[0];
+        c.type = 'text/javascript';
+        c.async = true;
+        c.id = 'devSDK';
+        c.src = './build/AnalysysFangzhou_PAAS_JS_SDK.min.js?v=' + time //����B SDK��ַ
+        n.parentNode.insertBefore(c, n);
+    })({
+        appkey: '1390517108757668u', //APPKEY
+        DEBUG: 1,
+        setUploadURL:'https://growth.analysys.cn:443/up',
+        setVisitorConfigURL:'https://growth.analysys.cn:443/configure'
+    })
+</script>
+  -->
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NW7M4FT"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>博客_易观方舟</title>
+  <%- include('../common/_meta.html')%>
+</head>
+<body class="p-article">
+<%- include('../common/_hd.html')%>
+  <div class="article-main clearfix" id="article">
+    <div class="gotop"><i class="iconfont">&#xee4b;</i></div>
+    <div class="share">
+      <div class="bdsharebuttonbox">
+          <a class="wx iconfont share-btn" data-cmd="weixin">&#xe63c;</a>
+          <a class="tsina iconfont share-btn" :href="sinaHref" target="_blank">&#xe640;</a>
+          <a class="qq iconfont share-btn" :href="qqHref" target="_blank">&#xe63d;</a>
+      </div>
+    </div>
+    <div class="article-l">
+      <div class="article-hd" v-cloak>
+        <h3 class="article-tit" v-text="article.title"></h3>
+        <div class="article-info"><img src="../../images/blog/author.png" height="18" width="18" alt="" class="src" /><span class="article-author" v-text="article.author"></span>
+          <span class="article-date" v-text="new Date(article.articleDate).format('YYYY/MM/DD hh:mm')"></span>
+            <div class="article-tag"><i class="iconfont" v-show="article.label&&article.label.length>0">&#xef08;</i><span @click="searchTag(item)" v-for="(item, i) in article.label">{{item}}{{i==article.label.length-1?'':'，'}}</span></div>
+        </div>
+      </div>
+      <div class="article-cnt" v-html="article.content"></div>
+      <ul class="article-ft">
+        <li :title="last.title" class="article-last" :class="!last.title && 'grey'"><span>上一篇：</span><a v-if="last.title" :href="'article.html?id='+last.id+'&columnId='+param.columnId+paramstr.search+paramstr.pageSize">{{last.title}}</a><span class="grey" v-if="!last.title">暂无</span></li>
+        <li class="article-next" :class="!next.title && 'grey'"><span>下一篇：</span><a :title="next.title" v-if="next.title" :href="'article.html?id='+next.id+'&columnId='+param.columnId+paramstr.search+paramstr.pageSize">{{next.title}}</a><span class="grey" v-if="!next.title">暂无</span></li>
+      </ul>
+    </div>
+    <div class="article-r">
+      <h4 class="rcmd-tit">相关推荐：</h4>
+      <ul class="rcmd-list">
+        <li v-for="item in relateList"><a :href="'article.html?id='+item.id+'&columnId='+item.columnId+paramstr.search+paramstr.pageSize" :title="item.title">{{item.title}}</a></li>
+      </ul>
+    </div>
+  </div>
+<%- include('../common/_ft.html')%>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"3","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//s1.analysys.cn/bdshare/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+</body>
+</html>

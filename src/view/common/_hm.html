@@ -1,0 +1,48 @@
+<script>
+    var debugDomain = parseInt('${locals.debugMode}');
+    (function(config) {
+      window.AnalysysAgent = window.AnalysysAgent || []
+      window.AnalysysAgent.methods = 'identify alias reset track profileSet profileSetOnce profileIncrement profileAppend profileUnset profileDelete registerSuperProperty registerSuperProperties unRegisterSuperProperty clearSuperProperties getSuperProperty getSuperProperties pageView debugMode auto appkey name uploadURL hash visitorConfigURL autoProfile autoWebstay autoHeatmap'.split(' ');
+      function factory(b) {
+          return function() {
+              var a = Array.prototype.slice.call(arguments);
+              a.unshift(b);
+              window.AnalysysAgent.push(a);
+              return window.AnalysysAgent;
+          }
+      };
+      for (var i = 0; i < AnalysysAgent.methods.length; i++) {
+          var key = window.AnalysysAgent.methods[i];
+          AnalysysAgent[key] = factory(key);
+      }
+      for (var key in config) {
+          if(!AnalysysAgent[key]){
+              AnalysysAgent[key] = factory(key); // 调热图时增加
+          }
+    AnalysysAgent[key](config[key])
+      }
+      var date = new Date();
+      var time = new String(date.getFullYear()) + new String(date.getMonth() + 1) + new String(date.getDate());
+      var dsrc = debugDomain === 1 ? '//ark.analysys.cn/sdk/v2_test/AnalysysAgent_JS_SDK.min.js' : '//ark.analysys.cn/sdk/v2_heatmap/AnalysysAgent_JS_SDK.min.js';
+      var d = document,
+          c = d.createElement('script'),
+          n = d.getElementsByTagName('script')[0];
+      c.type = 'text/javascript';
+      c.async = true;
+      c.id = 'devSDK';
+      c.src = dsrc + '?v=' + ~~(new Date() / 86400);
+      n.parentNode.insertBefore(c, n);
+  })({
+      appkey: debugDomain === 1 ? '31abd9593e9983ec' : '1390517108757668u', //APPKEY
+      debugMode: 2,   //发线上时改成2
+      autoHeatmap:true, // 热图开启
+      autoWebstay: true, // 视觉停留
+    uploadURL: debugDomain === 1 ? 'https://arkpaastest.analysys.cn:4089/' : 'https://uatlog.analysys.cn/',
+    visitorConfigURL: debugDomain === 1 ? 'https://arkpaastest.analysys.cn:4089/' : 'https://uatlog.analysys.cn/'
+  })
+</script>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NW7M4FT"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->

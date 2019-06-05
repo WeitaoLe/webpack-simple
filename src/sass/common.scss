@@ -1,0 +1,24 @@
+@import '../../inc';
+@import '../../common/fonts/iconfont';
+@import '../../common/base/base';
+@import '../../common/base/ft';
+@import '../../common/base/hd';
+@import '../../common/ui/ui';
+@import './module/blog/tab';
+@import './module/blog/list';
+.width-1190 {
+	width: 1190px;
+	margin: 0 auto;
+}
+
+.page-body-portal {
+	padding-top: 80px;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}

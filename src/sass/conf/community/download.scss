@@ -1,0 +1,194 @@
+@import '../../common';
+$argo-color: #702eff;
+.community-wrapper {
+  .topDld {
+    height: 640px;
+    padding-top: 80px;
+    background: url("../../../images/community/dld-banner-bac.jpg") no-repeat center bottom #fff;
+    text-align: center;
+    & > div {
+      display: inline-block;
+      vertical-align: top;
+    }
+    .lf-logo {
+      margin-right: 80px;
+    }
+    .rt-text {
+      text-align: left;
+      max-width: 500px;
+      h1 {
+        font-size: 28px;
+        color: #333;
+        margin-bottom: 28px;
+        span {
+          font-size: 14px;
+          position: relative;
+          top: -20px;
+          padding-right: 5px;
+        }
+      }
+      .txt1 {
+        font-size: 14px;
+        color: #666;
+        line-height: 24px;
+        margin-bottom: 10px;
+      }
+      .agree {
+        padding: 20px 0;
+        .ans-checkbox-wrapper .checkbox-label {
+          font-size: 12px;
+          color: #666;
+          line-height: 0;
+          font-weight: normal;
+        }
+      }
+      .btn-gp {
+        a {
+          display: inline-block;
+          width: 120px;
+          height: 38px;
+          line-height: 36px;
+          background-color: #fff;
+          border-radius: 19px;
+          border: solid 1px #f79065;
+          font-size: 14px;
+          color: #f79065;
+          text-align: center;
+          margin-right: 10px;
+          transition: all .2s;
+          &:hover {
+            background: #f79065;
+            color: #fff;
+          }
+        }
+      }
+      .txt2 {
+        font-size: 12px;
+        line-height: 20px;
+        color: #666;
+        margin-top: 20px;
+        span {
+          padding-right: 3px;
+          color: #fe4e00;
+        }
+      } 
+    }
+  }
+  .flow {
+    background: url("../../../images/community/liucheng-bac.jpg") no-repeat 50% 0;
+    min-height: 300px;
+    h1 {
+      text-align: center;
+      font-size: 30px;
+      color: #fff;
+      padding: 55px 0 45px;
+    }
+    .flow-cont {
+      font-size: 0;
+      text-align: center;
+      .flow-item {
+        display: inline-block;
+        width: 320px;
+        vertical-align: top;
+        img {
+          vertical-align: middle;
+          margin-bottom: 30px;
+          height: 46px;
+        }
+        p {
+          font-size: 18px;
+          color: #fff;
+        }
+      }
+    }
+  }
+  .qrcode-wrapper {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    border-radius: 4px;
+    background: #fff;
+    box-shadow: 0 0 6px 0px #b5b3b3;
+    .topBar {
+      text-align: right;
+      height: 30px;
+      line-height: 30px;
+      padding-right: 5px;
+      span {
+        font-size: 28px;
+        color: #aaa;
+        cursor: pointer;
+      }
+    }
+    .qrcode-box {
+      padding: 0 30px 30px;
+      img {
+        width: 250px;
+        height: 250px;
+      }
+      p {
+        font-size: 16px;
+        text-align: center;
+      }
+    }
+  }
+}
+.protcol {
+  .prot-box {
+    height: 450px;
+    overflow: auto;
+    h3 {
+      margin: 10px 0 20px;
+    }
+    h4 {
+      margin: 10px 0;
+    }
+    p {
+      margin-bottom: 5px;
+    }
+  }
+  .ans-modal-content-header {
+    background: #f8f8f8;
+  }
+  .ans-modal-content-footer {
+    display: none !important;
+  }
+  .ans-modal-box-close {
+    top: 18px !important;
+  }
+  .ans-modal-content-body {
+    padding: 15px !important;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .community-wrapper {
+    .topDld {
+      height: 600px;
+      padding: 40px 10px 0;
+      .lf-logo {
+        display: none;
+      }
+      .rt-text {
+        .btn-gp {
+          a {
+            font-size: 12px;
+            width: 100px;
+            height: 28px;
+            line-height: 26px;
+          }
+        }
+      }
+    }
+    .flow {
+      background: linear-gradient(90deg,#993aff,#6f2eff);
+      .flow-cont {
+        .flow-item {
+          padding-bottom: 20px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+.m-blog-list-tab {
+	height: 55px;
+	color: #666;
+	border-bottom: solid #d6d6d6 1px;
+	font-size: 14px;
+	padding: 0 30px;
+	li {
+		float: left;
+		margin-right: 12px;
+		line-height: 55px;
+		position: relative;
+		padding: 0 7px;
+		cursor: pointer;
+		&.act {
+			font-weight: bold;
+			&::after {
+				content: '';
+				position: absolute;
+				width: 100%;
+				border-bottom: solid #0098e1 2px;
+				bottom: 0;
+				left: 0;
+			}
+		}
+	}
+}

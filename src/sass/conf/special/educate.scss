@@ -1,0 +1,634 @@
+@import '../../common';
+.page-educate {
+  $width: 1140px;
+  a:focus {
+    text-decoration: none !important;
+  }
+  .banner {
+    position: relative;
+    .bac {
+      height: 550px;
+      background: url("../../../images/special/educate/banner.jpg") no-repeat 50%;
+      .content {
+        width: $width;
+        padding: 0 40px;
+        position: relative;
+        margin: 0 auto;
+        h1 {
+          font-size: 50px;
+          font-weight: normal;
+          color: #fff;
+          padding-top: 130px;
+        }
+        .shipin {
+          width: 480px;
+          height: 360px;
+          box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, .53);
+          border: solid 1px #8d57ff;
+          position: absolute;
+          right: 40px;
+          top: 85px;
+        }
+        .logo {
+          position: absolute;
+          left: 0;
+          top: 13px;
+          width: 112px;
+          height: 40px;
+        }
+      }
+    }
+    .float {
+      width: $width;
+      height: 290px;
+      background-color: #fff;
+	    box-shadow: 0px 3px 15px 0px rgba(133, 133, 133, .32);
+      border-radius: 4px;
+      margin: -70px auto 0;
+      padding-top: 35px;
+      text-align: center;
+      h3 {
+        font-size: 18px;
+        font-weight: normal;
+        color: #484848;
+      }
+      ul {
+        margin: 30px auto 0;
+        li {
+          display: inline-block;
+          padding: 0 35px;
+          img {
+            height: 121px;
+            vertical-align: middle;
+          }
+          p {
+            padding-top: 20px;
+            font-size: 16px;
+            color: #5b5b5b;
+          }
+        }
+      }
+    }
+  }
+  .worth {
+    width: $width;
+    margin: 50px auto 0;
+    text-align: center;
+    .item-box {
+      margin-top: 50px;
+      overflow: hidden;
+      .item {
+        width: 180px;
+        height: 205px;
+        background-color: #fff;
+        border: solid 1px #d7d7d7;
+        margin-right: 12px;
+        padding: 0 10px;
+        float: left;
+        img {
+          vertical-align: middle;
+          margin: 37px 0;
+        }
+        p {
+          font-size: 15px;
+          line-height: 22px;
+          color: #5b5b5b;
+        }
+        &:hover {
+          border: solid 1px #0075ea;
+        }
+        &:nth-child(6) {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+  .fangfa {
+    margin-top: 60px;
+    height: 469px;
+    background-color: #f6f9fc;
+    &::before {
+      content: '';
+      display: table;
+    }
+    .ff-body {
+      margin: 40px auto;
+      width: $width;
+      height: 389px;
+      & > div {
+        float: left;
+      }
+      .left {
+        width: 413px;
+        height: 390px;
+        background-color: #fff;
+        padding: 30px 0;
+        p {
+          font-size: 16px;
+          line-height: 26px;
+          color: #5b5b5b;
+          padding: 0 20px;
+        }
+        .btn-group {
+          margin-top: 30px;
+          a {
+            display: inline-block;
+            text-align: center;
+            width: 140px;
+            height: 38px;
+            line-height: 38px;
+            border-radius: 4px;
+            font-size: 18px;
+            color: #fff;
+            &:hover {
+              opacity: .8;
+            }
+            &.blue-btn {
+              background-color: #0075ea;
+              margin: 0 35px 0 44px;
+            }
+            &.orag-btn {
+              background-color: #f97455;
+            }
+          }
+        }
+      }
+      .right {
+        padding: 8px 0 0 68px;
+        min-height: 360px;
+        .common-tit {
+          text-align: center;
+        }
+        .gaijin {
+          margin-top: 50px;
+          .top {
+            &::after {
+              content: '';
+              display: block;
+              clear: both;
+            }
+            & > div {
+              float: left;
+            }
+            .text {
+              width: 180px;
+              line-height: 21px;
+              padding-top: 20px;
+              h2 {
+                font-size: 18px;
+                &.green {
+                  margin-top: 60px;
+                  color: #27b0b0;
+                }
+                &.red {
+                  margin-top: 40px;
+                  color: #e56476;
+                }
+                &.blue {
+                  color: #009fe3;
+                }
+                &.yellow {
+                  color: #edbc31;
+                }
+              }
+              p {
+                color: #5b5b5b;
+                font-size: 15px;
+              }
+              &.lf {
+                text-align: right;
+              }
+              &.rt {
+                text-align: left;
+              }
+            }
+            .mimg {
+              width: 236px;
+              height: 236px;
+              margin: 0 25px;
+              background: url("../../../images/special/educate/fangfa.png");
+            }
+          }
+          .bot {
+            text-align: center;
+            margin-top: 20px;
+            color: #3f3a39;
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }
+  .vedio {
+    width: $width;
+    margin: 0 auto;
+    height: 387px;
+    & > div {
+      float: left;
+    }
+    .left {
+      padding-top: 62px;
+      width: 720px;
+      height: 100%;
+      li {
+        float: left;
+        padding: 0 30px 32px 0;
+        width: 360px;
+        & > div {
+          width: 252px;
+          display: inline-block;
+          line-height: 24px;
+          vertical-align: middle;
+          margin-left: 6px;
+          h2 {
+            color: #3e3a39;
+            font-size: 18px;
+          }
+          p {
+            color: #595757;
+            font-size: 14px;
+          }
+        }
+        img {
+          vertical-align: top;
+          padding-top: 15px;
+        }
+      }
+    }
+    .right {
+      width: 420px;
+      height: 240px;
+      border: solid 1px #8d57ff;
+      margin-top: 77px;
+    }
+  }
+  .service {
+    .tags {
+      background: #009bea;
+      height: 108px;
+      ul {
+        width: $width;
+        height: 100%;
+        margin: 0 auto;
+        text-align: center;
+        li {
+          display: inline-block;
+          padding: 0 34px;
+          img {
+            margin: 20px 0 10px;
+            vertical-align: middle;
+          }
+          p {
+            font-size: 18px;
+            color: #fff;
+          }
+        }
+      }
+    }
+    .big-ct {
+      background: #0075ea;
+      height: 640px;
+      .ct-body {
+        width: $width;
+        margin: 0 auto;
+        text-align: center;
+        h2 {
+          font-size: 28px;
+          color: #fff;
+          padding-top: 42px;
+        }
+        .mid-txt {
+          font-size: 18px;
+          line-height: 28px;
+          color: #fff;
+          padding-top: 28px;
+        }
+        .btn-div {
+          padding-top: 26px;
+          a {
+            display: inline-block;
+            width: 150px;
+            height: 38px;
+            line-height: 38px;
+            font-size: 18px;
+            color: #fff;
+            background-image: linear-gradient(90deg, #10cae6 0%, #039ede 100%), linear-gradient(#0075ea, #0075ea);
+            background-blend-mode: normal, normal;
+            box-shadow: 0px 2px 4px 0px rgba(3, 158, 222, .53);
+            border-radius: 4px;
+          }
+        }
+        .getData {
+          padding: 67px 30px 0;
+          & > div {
+            float: left;
+          }
+          .get-btn {
+            display: inline-block;
+            width: 90px;
+            height: 32px;
+            line-height: 32px;
+            border: solid 1px #fff;
+            font-size: 16px;
+            color: #fff;
+          }
+          .diantu {
+            position: relative;
+            width: 629px;
+            height: 290px;
+            margin-right: 80px;
+            background: url("../../../images/special/educate/zhili.png") no-repeat;
+            .get-btn {
+              position: absolute;
+              bottom: 0;
+              left: 270px;
+            }
+          }
+          .shu {
+            width: 162px;
+            height: 290px;
+            text-align: center;
+            padding-top: 10px;
+            img {
+              vertical-align: middle;
+              margin-bottom: 24px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .orderDemo {
+    height: 540px;
+    background: #f6f9fc;
+    .od-content {
+      width: $width;
+      margin: 0 auto;
+      padding-top: 40px;
+      & > div {
+        float: left;
+      }
+      .subInfo {
+        $normal: #dce0e6;
+        $error: #f31414;
+        width: 440px;
+        height: 460px;
+        background-color: #fff;
+        box-shadow: 0px 3px 15px 0px rgba(133, 133, 133, .32);
+        border-radius: 4px;
+        margin-right: 60px;
+        text-align: center;
+        padding-top: 20px;
+        .form-div {
+          padding: 30px 40px 0;
+          .inputp {
+            height: 38px;
+            line-height: 38px;
+            background-color: #fff;
+            border-radius: 2px;
+            border: solid 1px $normal;
+            overflow: hidden;
+            margin-bottom: 20px;
+            input {
+              border: none;
+              width: 300px;
+              height: 100%;
+              padding: 0 5px;
+              vertical-align: top;
+              font-size: 15px;
+            }
+            .beb {
+              color: $normal;
+              font-size: 20px;
+            }
+            .error {
+              color: $error;
+              font-size: 18px;
+              opacity: 0;
+            }
+            &.hasErr {
+              border: solid 1px $error;
+              .beb {
+                color: $error;
+              }
+              .error {
+                opacity: 1;
+              }
+            }
+          }
+          .btnp {
+            padding-top: 10px;
+            a {
+              display: inline-block;
+              width: 120px;
+              height: 34px;
+              line-height: 34px;
+              border-radius: 2px;
+              font-size: 18px;
+              color: #fff;
+              &:hover {
+                opacity: .8;
+              }
+              &.blue {
+                background: #0075ea;
+                margin-right: 40px;
+              }
+              &.org {
+                background: #f97455;
+              }
+            }
+          }
+        }
+      }
+      .kefu {
+        text-align: center;
+        .diannao {
+          width: 640px;
+          height: 369px;
+          background: url("../../../images/special/educate/diannao.png");
+          position: relative;
+          margin-top: 45px;
+          p {
+            width: 450px;
+            line-height: 26px;
+            font-size: 16px;
+            color: #fff;
+            margin: 0 auto;
+            padding-top: 55px;
+            span {
+              color: #ffea00;
+              padding: 0 5px;
+            }
+          }
+          h2 {
+            position: absolute;
+            right: 150px;
+            top: 160px;
+            width: 120px;
+            font-size: 30px;
+            font-weight: normal;
+            line-height: 48px;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+  .company {
+    text-align: center;
+    width: $width;
+    height: 350px;
+    margin: 0 auto;
+    .common-tit {
+      margin: 30px 0 46px;
+    }
+    .item {
+      width: 200px;
+      height: 70px;
+      background-color: #fff;
+      float: left;
+      margin: 0 35px 35px 0;
+      &:nth-child(5n) {
+        margin: 0 0 35px 0;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  .footer {
+    .top {
+      height: 300px;
+      background: url("../../../images/special/educate/footer.jpg") no-repeat 50%;
+      & > div {
+        width: $width;
+        margin: 0 auto;
+        padding-left: 50px;
+      }
+      h2 {
+        font-size: 36px;
+        color: #fff;
+        padding-top: 75px;
+      }
+      p {
+        font-size: 16px;
+        color: #c7c7c7;
+        padding: 18px 0 35px;
+        span {
+          color: #ffea00;
+        }
+      }
+      .btnp {
+        a {
+          display: inline-block;
+          text-align: center;
+          width: 150px;
+          height: 45px;
+          line-height: 45px;
+          border-radius: 23px;
+          border: solid 1px #fff;
+          font-size: 18px;
+          color: #fff;
+          margin-right: 20px;
+        }
+      }
+    }
+    .mid {
+      height: 115px;
+      background: #303030;
+      text-align: center;
+      color: #fff;
+      font-size: 14px;
+      padding-top: 20px;
+      p {
+        line-height: 43px;
+        span {
+          padding-right: 45px;
+          &:last-child {
+            padding-right: 0;
+          }
+        }
+        .iconfont {
+          padding-right: 5px;
+          vertical-align: middle;
+        }
+      }
+    }
+    .bot {
+      height: 45px;
+      line-height: 45px;
+      background: #272727;
+      text-align: center;
+      color: #fff;
+      font-size: 14px;
+    }
+  }
+  .askOnline {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    border-radius: 4px;
+    padding: 4px;
+    background: #fff;
+    box-shadow: 0 0 6px 0px #b5b3b3;
+    .topBar {
+      text-align: right;
+      height: 30px;
+      line-height: 30px;
+      padding-right: 5px;
+      span {
+        font-size: 28px;
+        color: #aaa;
+        cursor: pointer;
+      }
+    }
+    .content-box {
+      width: 487px;
+      height: 304px;
+      background: url("../../../images/special/educate/diannao.png") -77px -23px;
+      position: relative;
+      p {
+        width: 450px;
+        line-height: 26px;
+        font-size: 16px;
+        color: #fff;
+        margin: 0 auto;
+        padding-top: 30px;
+        span {
+          color: #ffea00;
+          padding: 0 5px;
+        }
+      }
+      h2 {
+        position: absolute;
+        right: 70px;
+        top: 135px;
+        width: 120px;
+        font-size: 30px;
+        font-weight: normal;
+        line-height: 48px;
+        color: #fff;
+      }
+    }
+  }
+  /* common.scss */
+  .common-tit {
+    font-size: 28px;
+    font-weight: normal;
+    color: #0075ea;
+    position: relative;
+    &::after {
+      content: '';
+      width: 42px;
+      height: 2px;
+      position: absolute;
+      bottom: -15px;
+      left: 50%;
+      transform: translate(-50%, 0);
+      background: #cbcbcb;
+    }
+  }
+}

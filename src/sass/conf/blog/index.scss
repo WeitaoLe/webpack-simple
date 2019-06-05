@@ -1,0 +1,164 @@
+@import '../../common';
+.page-body-portal{
+    margin-bottom: 60px;
+    .banner-box{
+        background: #ecf0f1;
+        .banner{
+            height: 400px;
+            overflow: hidden;
+            position: relative;
+            margin: 0 auto;
+            .banner-images{
+                position: relative;
+                .img-box {
+                    width: 100%;
+                    height: 400px;
+                    animation:fadeInUp 1.5s 0s;
+                    a {
+                        display: block;
+                        height: 100%;
+                    }
+                }
+                @keyframes fadeInUp{
+                0%{opacity:0.2}
+                100%{opacity:1}
+                }
+            }
+            .img-c{
+                position: absolute;
+                bottom: 20px;
+                width: 100%;
+                height: 12px;
+                text-align: center;
+                .img-o{
+                    width: 12px;
+                    height: 12px;
+                    border-radius: 6px;
+                    background: #40B2E8;
+                    display: inline-block;
+                    user-select: none;
+                    cursor: pointer;
+                    margin-left: 7px;
+                    &:hover{
+                        background: white;
+                    }
+                    &.act{
+                        width: 28px;
+                        background: #7ACBEF;
+                    }
+                }
+            }
+        }
+    }
+    #blog-list{
+        min-height: 300px;
+        margin-bottom: 30px;
+    }
+    .nodata{
+      font-size: 12px;
+      color: #999;
+      margin-top: 60px;
+      text-align: center;
+      line-height: 12px;
+      &.hotarts{
+        line-height: 270px;
+        margin-top: 0;
+      }
+    }
+    .list-body{
+        margin-top: 20px;
+        background: #fff;
+        .loading-more{
+            display: none;
+        }
+        .list-b{
+            float: left;
+        }
+        .list-body-left{
+            width: 788px;
+            margin-right: 24px;
+        } 
+        .list-body-right{
+            width: 378px;
+            .hot-article {
+                background: #F9F9F9;
+                padding: 24px 24px 0;
+            }
+            h4{
+                font-size: 16px;
+                color: #333;
+                line-height: 16px;
+                margin-bottom: 20px;
+            }
+            .article{
+                min-height: 270px;
+                li{
+                    
+                    border-bottom: 1px solid #E8E8E8;
+                    font-size: 13px;
+                    color: #000;
+                    cursor: pointer;
+                    &:nth-last-of-type(1){
+                        border-bottom: none;
+                    }
+                    a {
+                        height: 54px;
+                        line-height: 54px;
+                        display: block;
+                        &:hover{
+                            color: $color;
+                        }
+                    }
+                    
+                }
+            }
+            .partner{
+                margin-top: 20px;
+                background: #F9F9F9;
+                padding: 24px 24px 0;
+                .name{
+                    font-size: 16px;
+                    line-height: 16px;
+                    color: #333;
+                    font-weight: bold;
+                    text-align: left;
+                    span{
+                        font-size: 12px;
+                        float: right;
+                        color: #999;
+                        user-select: none;
+                        cursor: pointer;
+                    }
+                }
+                .partner-imgs{
+                    margin: 10px 0;
+                    .partner-img{
+                        width: 100%;
+                        tr>td{
+                            width: 33.3%;
+                            height: 72px;
+                            user-select: none;
+                            img{
+                                max-width: 108px;
+                                cursor: pointer;
+                            }
+                            &.f-center{
+                                text-indent: 5px;
+                            }
+                            &.f-right{
+                                text-align: right;
+                            }
+                        }
+                    }
+                }
+            }
+        } 
+    }
+}
+.clip {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    word-break: break-all;
+}
+

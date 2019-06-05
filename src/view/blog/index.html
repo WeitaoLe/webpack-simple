@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <%- include('../common/_meta.html')%>
+        <title>博客_易观方舟</title>
+    </head>
+    <body data-host="${locals.baseUrl}">
+    	<%- include('../common/_hd.html')%>
+    	<div class="page-body-portal">
+    		<div class="banner-box">
+    			<div class="banner">
+	    			<div class="banner-images">
+	    			</div>
+	    			<div class="img-c outer">
+	    			</div>
+	    		</div>
+    		</div>
+    		<div class="list-body outer width-1190">
+    			<div class="list-body-left list-b">
+    				<ul class="m-blog-list-tab blogTab">
+						<li data-columnId="0">最新文章</li>
+						<li data-columnId="2001">产品动态</li>
+						<li data-columnId="2003">客户案例</li>
+						<li data-columnId="2004">数据分析方法</li>
+						<li data-columnId="2005">最新活动</li>
+						<li data-columnId="2006">媒体报道</li>
+					</ul>
+					<ul class="m-blog-list" id="blog-list">
+
+					</ul>
+					<div class="loading-more getMore">加载更多</div>
+    			</div>
+
+    			<div class="list-body-right list-b">
+    				<div class="hot-article">
+	    				<h4>热门文章</h4>
+	    				<div class="article">
+	    					<ul>
+
+	    					</ul>
+	    				</div>
+    				</div>
+
+    				<div class="partner">
+    					<div class="name">
+    						合作伙伴<span><a href="${locals.baseUrl}/about-friends.html">更多</a></span>
+    					</div>
+    					<div class="partner-imgs outer">
+    						<table class="partner-img link-partner-img">
+    							<tr>
+    								<td><a href="javascript: void(0);"><img src="../../images/blog/partner-1.png"/></a></td>
+    								<td class="f-center"><a href="javascript: void(0);"><img src="../../images/blog/partner-2.png"/></a></td>
+    								<td class="f-right"><a href="javascript: void(0);"><img src="../../images/blog/partner-3.png"/></a></td>
+    							</tr>
+    							<tr>
+    								<td><a href="javascript: void(0);"><img src="../../images/blog/partner-4.png"/></a></td>
+    								<td class="f-center"><a href="javascript: void(0);"><img src="../../images/blog/partner-5.png"/></a></td>
+    								<td class="f-right"><a href="javascript: void(0);"><img src="../../images/blog/partner-6.png"/></a></td>
+    							</tr>
+    						</table>
+    					</div>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+        <div class="gotop"><i class="iconfont">&#xee4b;</i></div>
+    	<%- include('../common/_ft.html')%>
+        <%- include('../common/_hm.html')%>
+    </body>
+    
+</html>

@@ -1,0 +1,187 @@
+$borderStyle: 1px solid #ccc;  //边框样式
+$primaryColor: #3f95ff;        //主要颜色
+//demo view/operate/addactivity.html
+
+	.v-input {
+		vertical-align: middle;
+		height: 28px;
+		line-height:28px;
+    position: relative;
+		.iconfont {
+			width:32px;
+	    height: 28px;
+	    line-height:28px;
+	    font-size: 16px;
+	    text-align: center;
+	    color: $primaryColor;
+	    position: absolute;
+	    right: 0;
+	    z-index: 1;
+      user-select: none;
+		}
+    // 带所有边框
+    .v-default{
+      height: 28px;
+      line-height:28px;
+      padding: 0px 7px;
+      font-size: 14px;
+      border: $borderStyle;
+      border-radius: 4px;
+      color: $primaryColor;
+      background-image: none;
+      width:100%;
+      &:hover, &:active {
+        border: 1px solid #3289ff
+      }
+      &:focus {
+        border: 1px solid #3289ff;
+        box-shadow:0 0 8px #cce0fd;
+      }
+    }
+    // 只有底部边框
+    .v-plain {
+      height: 28px;
+      line-height:28px;
+      padding: 0px 7px;
+      font-size: 14px;
+      border:0px;
+      width:100%;
+      color: $primaryColor;
+      border-bottom: 1px solid #dfe4eb;
+    }
+    .v-disabled {
+      background-color: #f3f3f3;
+      opacity: 1;
+      cursor: not-allowed;
+      color: #ccc;
+      &:hover {
+        border: $borderStyle;
+      }
+    }
+    .v-readonly {
+      background-color: #f3f3f3;
+      opacity: 1;
+      cursor: pointer;
+      color: #ccc;
+    }
+	}
+.form {
+  display: table;
+  margin: 10px auto;
+  label {
+    position: relative;
+    display: block;
+    input {
+      background: #fff;
+      display: block;
+      padding: 28px 0 8px 8px;
+      width: 270px;
+      margin-bottom: 8px;
+      outline: none;
+      font-size: 14px;
+      transition: all 0.2s ease-in-out;
+      color: #333;
+      border-top: 0;
+      border-right: 0;
+      border-left: 0;
+      border-bottom: 1px solid #bbb;
+      &:-webkit-autofill {
+        -webkit-box-shadow: 0 0 0 400px #fff inset;
+        -webkit-text-fill-color: #333;
+      }
+
+      &::-ms-clear, &::-ms-reveal {
+        display: none;
+      }
+
+      &::placeholder {
+        transition: all 0.2s ease-in-out;
+        color: #bbb;
+      }
+
+      &:-ms-input-placeholder {
+        color: #bbb;
+      }
+
+      &::-webkit-input-placeholder {
+        color: #bbb;
+      }
+
+      &:focus, &.populated {
+        border-bottom: 1px solid #0098e1;
+        &::-ms-clear, &::-ms-reveal {
+          display: none;
+        }
+
+        &::placeholder {
+          color: transparent;
+        }
+
+        & + span {
+          opacity: 1;
+          top: 10px;
+        }
+
+      }
+    }
+    span {
+      color: #0098e1;
+      font-size: 12px;
+      position: absolute;
+      top: 0;
+      left: 8px;
+      opacity: 0;
+      transition: all 0.2s ease-in-out;
+    }
+
+    &.suc {
+      input{
+        border-bottom: 1px solid #bbb;
+        padding-right: 35px;
+        &::placeholder {
+          color: transparent;
+        }
+
+        & + span {
+          opacity: 1;
+          top: 10px;
+        }
+      }
+
+      span {
+        color: #bbb;
+        font-size: 12px;
+        position: absolute;
+        top: 0;
+        left: 8px;
+        opacity: 0;
+        transition: all 0.2s ease-in-out;
+      }
+    }
+
+    &.error ,&[err-type="true"] {
+      input {
+        border-bottom: 1px solid #ED6056;
+
+        &::placeholder {
+          color: transparent;
+        }
+
+        & + span {
+          opacity: 1;
+          top: 10px;
+        }
+      }
+
+      span {
+        color: #ED6056;
+        font-size: 12px;
+        position: absolute;
+        top: 0;
+        left: 8px;
+        opacity: 0;
+        transition: all 0.2s ease-in-out;
+      }
+    }
+  }
+}

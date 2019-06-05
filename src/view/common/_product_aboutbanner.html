@@ -1,0 +1,42 @@
+<div class="about-banner">
+  <div class="container">
+    
+    <h1 class="banner-text">易观方舟，数据驱动营销闭环</h1>
+    <p style="font-size: 16px; color: #fff; text-align: center; padding-bottom: 20px">分析 - 分群 - 运营 - 分析闭环验证，真正做到分析可落地，落地可验证，促进产品螺旋式迭代和运营过程</p>
+
+    <ul class="about-nav">
+      <li data-type="panel">
+        <a href="product-panel.html">看板</a>
+      </li>
+      <li data-type="analytics">
+        <a href="product-analytics.html">分析</a>
+      </li>
+      <li data-type="segmentation">
+        <a href="product-segmentation.html">分群</a>
+      </li>
+      <li data-type="operate">
+        <a href="product-operate.html">运营</a>
+      </li>
+      <li data-type="data">
+        <a href="access-data.html">数据接入</a>
+      </li>
+      <li data-type="platform">
+        <a href="access-platform.html">平台扩展</a>
+      </li>
+      <li data-type="others">
+        <a href="access-others.html">用户画像</a>
+      </li>
+      <li data-type="private">
+        <a href="access-private.html">私有部署</a>
+      </li>
+    </ul>
+    
+    <script>
+      (function () {
+        let url = window.location.pathname
+        let type = url.split('-')[1].split('.')[0]
+        document.querySelector(".about-nav li[data-type=" + type + "]").className = 'active'
+      })()
+    </script>
+  </div>
+</div>

@@ -1,0 +1,221 @@
+// @import '../../common';
+
+$active-color: #0097e0;
+.ark-help {
+  position: fixed;
+  right: 11px;
+  bottom: 78px;
+  width: 340px;
+  height: 350px;
+  z-index: 110;
+  margin-left: 40px;
+  background-color: #fff;
+  box-shadow: 0 6px 18px 0 rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  transform: translate(360px, 0);
+  transition: transform 0.3s;
+
+  .ark-help-header {
+    width: 340px;
+    height: 140px;
+    background-image: linear-gradient(90deg, #3ebef9 0%, #5e7df1 100%), linear-gradient(#fff, #fff);
+    border-radius: 4px 4px 0 0;
+
+    .header-title {
+      font-size: 18px;
+      color: #fff;
+      padding: 28px 0 0 30px;
+    }
+
+    .sub-title {
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.4);
+      padding: 5px 0 0 30px;
+    }
+  }
+
+  .ark-help-contact {
+    position: absolute;
+    top: 105px;
+    width: 320px;
+    height: 116px;
+    margin: 0 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    .content {
+      margin: 20px;
+      p {
+        font-size: 13px;
+        color: #666;
+        text-align: left;
+        margin: 10px 0;
+      }
+      .title {
+        position: relative;
+
+        span:first-child {
+          font-size: 14px;
+          font-weight: bold;
+          color: #666;
+        }
+
+        span:last-child {
+          position: absolute;
+          top: 3px;
+          right: 0;
+          font-size: 12px;
+          color: #b2b2b2;
+        }
+      }
+    }
+
+    .fish-doctor {
+      position: absolute;
+      top: -67px;
+      right: 0;
+      width: 103px;
+      height: 99px;
+
+      img {
+        width: 100%
+      }
+    }
+  }
+
+  .ark-help-action {
+    margin-top: 110px;
+    .ark-help-tabs {
+      padding: 0 15px;
+      display: flex;
+      overflow: hidden;
+      .ark-help-tab {
+        flex: 1;
+        padding: 0;
+        box-sizing: border-box;
+        a {
+          display: block;
+          text-decoration: none;
+          color: #959cac;
+          margin: auto;
+          transition: all .2s ease;
+
+          .action-name {
+            font-size: 14px;
+            color: #666;
+            text-align: center;
+          }
+
+          &:hover {
+            color: $active-color;
+            .action-icon {
+              border-color: $active-color;
+            }
+
+            .action-name {
+              color: $active-color;
+            }
+          }
+
+          .action-icon {
+            width: 40px;
+            height: 40px;
+            margin: 4px auto;
+            border-radius: 50%;
+            border: solid 1px #e3e3e3;
+            text-align: center;
+
+            i {
+              margin-top: 8px;
+              display: inline-block;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.ark-help-button, .ark-phone-btn{
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: #ffffff;
+  box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.15);
+  border-radius: 50%;
+  z-index: 110;
+  overflow: hidden;
+  cursor: pointer;
+
+  .close {
+    display: none;
+    font-size: 18px;
+    margin-right: 16px;
+    margin-top: 16px;
+    color: #666;
+    transition: all .2s ease;
+    opacity: 1;
+
+    &:hover {
+      color: $active-color;
+    }
+  }
+}
+.ark-phone-btn {
+  bottom: 20px;
+  padding: 12px;
+  display: none;
+  img {
+    width: 26px;
+    height: auto;
+  }
+}
+
+.ark-help-tip {
+  display: none;
+  position: fixed;
+  right: 0;
+  bottom: 82px;
+  padding: 8px;
+  font-size: 12px;
+  border-radius: 4px;
+  color: #fff;
+  z-index: 110;
+  background: rgba(54, 54, 54, 0.8);
+  transform: translate(-17px, 0px);
+  span {
+    font-size: 12px;
+  }
+
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -10px;
+    right: 23px;
+    width: 0;
+    height: 0;
+    border: 5px solid transparent;
+    border-top-color: rgba(54, 54, 54, 0.8);
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .ark-help {
+    right: 0;
+  }
+
+}
+@media only screen and (max-width: 998px) {
+  .ark-phone-btn {
+    display: block;
+  }
+  .ark-help-button {
+    bottom: 80px;
+  }
+  .ark-help {
+    bottom: 138px;
+  }
+}

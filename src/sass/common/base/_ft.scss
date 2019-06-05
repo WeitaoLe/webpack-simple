@@ -1,0 +1,261 @@
+.m-portal-ft {
+  background: #15222c;
+  .left {
+    margin-top: 45px;
+    ul {
+      .hd {
+        color: #fff;
+        font-size: 16px;
+        min-height: 50px;
+        a {
+          color: #fff;          
+        }
+      }
+      .bd {
+        margin-bottom: 24px;
+        a {
+          color: rgba(255, 255, 255, 0.7);
+          &:hover {
+            color: #0098e0;
+          }
+        }
+      }
+      .bd-h5 {
+        display: none;
+      }
+    }
+  }
+  .right {
+    margin-top: 45px;
+    .information {
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.7);
+      text-align: right;
+      margin-right: 10px;
+      .logo {
+        white-space: nowrap;
+        .logo-h5 {
+          display: none;
+        }
+        img {
+          width: 132px;
+        }
+        .img-1 {
+          width: 132px;
+          margin-right: 12px;
+          border-right: 1px solid #4A5054;
+          padding-right: 20px;
+        }
+      }
+      .tel {
+        margin-top: 20px;
+        margin-bottom: 6px;
+      }
+      i {
+        font-size: 14px;
+        color: #fff;
+        margin-right: 5px;
+      }
+    }
+
+    .qq, .weixin {
+      width: 115px;
+      margin: 0 10px 20px 10px;
+      text-align: right;
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 12px;
+      float: right;
+      img {
+        width: 112px;
+        height: 112px;
+      }
+    }
+    .qcode{
+      margin-top: 110px;
+    }
+  }
+  .text-info {
+    line-height: 25px;
+    padding: 20px 0;
+    color: rgba(255, 255, 255, 0.7);
+    border-top: solid #4A5054 1px;
+    .row-up,.row-down{
+      white-space: nowrap;
+    }
+    @media (min-width: 768px) {
+      .row-up{
+        text-align: right;
+      }
+      .row-down{
+        text-align: left;
+      }
+     }
+     @media (max-width: 768px) {
+      .row-up{
+        text-align: center;
+      }
+      .row-down{
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 375px) {
+      .row1{
+        display : none;
+      }
+      .row2{
+        display : block;
+      }
+    }
+    @media (min-width: 375px) {
+      .row1{
+        display : block;
+      }
+      .row2{
+        display : none;
+      }
+    }
+
+
+    span, a {
+      margin-right: 10px;
+      color: rgba(255, 255, 255, 0.7);
+    }
+    a:hover {
+      color: #0098e0;
+    }
+  }
+
+  
+  .fix-ad {
+    background: #0036e1;
+    height: 100px;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 111;
+    .cha {
+      position: absolute;
+      font-size: 20px;
+      left: 0px;
+      top: -10px;
+      color: #fff;
+      cursor: pointer;
+    }
+    .ad-cont {
+      display: block;
+      width: 1124px;
+      height: 100%;
+      margin: 0 auto;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .m-portal-ft {
+    .fix-ad {
+      height: auto;
+      .cha {
+        top: -13px;
+      }
+      .ad-cont {
+        width: 100%;
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width: 992px) {
+  .m-portal-ft{
+    .right .information {
+      text-align: center;
+      .logo  {
+        .logo-h5 {
+          display: inline-block;
+        }
+        .logo-pc {
+          display: none;
+        }
+      }
+    }
+    .right .qcode {
+      text-align: center;
+    }
+    .right .weixin, .right .qq {
+      float: initial;
+      display: inline-block;
+      vertical-align: top;
+    }
+    .left{
+      display: flex;
+      ul{
+        flex:1;
+        .hd {
+          min-height: 42px;
+        }
+        .bd {
+          margin-bottom: 16px;
+        }
+        .bd-pc {
+          display: none;
+        }
+        .bd-h5 {
+          display: block;
+        }
+      }
+    }
+
+
+  }
+ }
+
+ @media (min-width: 992px) {
+  .m-portal-ft{
+    .left{
+      display: flex;
+      ul{
+        flex:1;
+      }
+    }
+  }
+ }
+@media (min-width: 1190px) {
+  .m-portal-ft{
+    .outer{
+      width:1190px;
+      margin : 0 auto;
+      .left{
+        display: flex;
+        ul{
+          flex:1;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 420px) {
+  .m-portal-ft{
+    .left{
+      display : block ;
+      padding: 0 15px;
+      ul{
+        width: 33.3%;
+        float : left;
+        margin-bottom: 20px;
+        padding-left: 15px;
+        ul:first-child {
+          width:100%;
+        }
+        &.ul-doc {
+          padding-bottom: 40px;
+        }
+      }
+    }
+  }
+}

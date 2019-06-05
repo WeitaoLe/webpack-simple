@@ -1,0 +1,77 @@
+/**
+ * Common ui for dropdown list.
+ *
+ * @author Allex Wang (allex.wxn@gmail.com)
+ */
+
+.v-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1;
+  display: none;
+  float: left;
+  min-width: 165px;
+  padding: 5px 0;
+  margin: 2px 0 0;
+  font-size: 12px;
+  line-height: 1.5;
+  text-align: left;
+  list-style: none;
+  background-color: #fff;
+  background-clip: padding-box;
+  border-radius: 3px;
+  box-shadow: 0px 2px 10px rgba(153, 153, 153, 0.5);
+
+  .scrollbar {
+    max-height: 280px;
+  }
+
+  li {
+    cursor: pointer;
+    line-height: 30px;
+    // Links within the dropdown menu
+    > a, .describe {
+      display: block;
+      padding: 0 8px;
+      font-weight: normal;
+      white-space: nowrap; // prevent links from randomly breaking onto new lines
+    }
+    > a {
+      cursor: pointer;
+      clear: both;
+      &:hover { background: #f6f6f6; }
+    }
+    .describe {
+      cursor: auto;
+      color: #cdcdcd;
+      border-top: 1px solid #f6f6f6;
+      user-select: none;
+    }
+    &:first-child .describe { border-top: 0; }
+  }
+
+  @at-root .open>#{&} { display: block; }
+
+  .searchbox {
+    padding: 2px 6px 4px;
+    label {
+      display: block;
+      position: relative;
+      i {
+        position: absolute;
+        top: 50%;
+        left: 6px;
+        margin-top: -12px;
+        display: inline-block;
+      }
+      input[type="text"] {
+        width: 100%;
+        padding: 3px 0 2px 24px;
+        border: 1px solid #e2e3e6;
+        border-radius: 2px;
+      }
+    }
+  }
+
+}
